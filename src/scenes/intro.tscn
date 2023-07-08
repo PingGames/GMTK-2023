@@ -1,0 +1,276 @@
+[gd_scene load_steps=11 format=3 uid="uid://bujo6ub518osc"]
+
+[ext_resource type="Script" path="res://scripts/intro.gd" id="1_m0m3k"]
+[ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="2_me3cw"]
+[ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="3_hhuav"]
+[ext_resource type="Texture2D" uid="uid://dh25srcj55h68" path="res://sprites/guemax-logo-circle.png" id="4_2l84s"]
+
+[sub_resource type="Theme" id="Theme_trjcu"]
+default_font = ExtResource("2_me3cw")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ihods"]
+content_margin_left = 40.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_wviwl"]
+font = ExtResource("3_hhuav")
+font_size = 75
+font_color = Color(0.188235, 0.219608, 0.262745, 1)
+shadow_color = Color(0, 0, 0, 0.0784314)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="Animation" id="Animation_u8kbr"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LogoGuemax:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LogoGuefra:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LogoPingGames:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vcunx"]
+resource_name = "intro"
+length = 13.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1.93187, 0.5),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LogoGuemax:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 1.5, 3, 3.5),
+"transitions": PackedFloat32Array(1.8025, 0.392292, 1.62451, 0.450625),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4, 4.25, 4.75, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LogoGuefra:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(5.5, 6, 7.5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(8.5, 8.75, 10.15, 10.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LogoPingGames:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(10.9, 11.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yyocw"]
+_data = {
+"RESET": SubResource("Animation_u8kbr"),
+"intro": SubResource("Animation_vcunx")
+}
+
+[node name="IntroScreen" type="Node2D"]
+script = ExtResource("1_m0m3k")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -72.0
+offset_top = -48.0
+offset_right = 1976.0
+offset_bottom = 1160.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.945098, 0.964706, 0.941176, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1921.0
+offset_bottom = 1088.0
+alignment = 1
+
+[node name="and" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_trjcu")
+theme_override_colors/font_color = Color(0.505882, 0.580392, 0.278431, 1)
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ihods")
+text = "and"
+label_settings = SubResource("LabelSettings_wviwl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1921.0
+offset_bottom = 1088.0
+alignment = 1
+
+[node name="presented" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_trjcu")
+theme_override_colors/font_color = Color(0.505882, 0.580392, 0.278431, 1)
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ihods")
+text = "present in collaboration with"
+label_settings = SubResource("LabelSettings_wviwl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LogoGuemax" type="MarginContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="guemax" type="Sprite2D" parent="LogoGuemax"]
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_2l84s")
+
+[node name="LogoGuefra" type="MarginContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="guemax" type="Sprite2D" parent="LogoGuefra"]
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_2l84s")
+
+[node name="LogoPingGames" type="MarginContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="guemax" type="Sprite2D" parent="LogoPingGames"]
+position = Vector2(960, 540)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_2l84s")
+
+[node name="Overlay" type="ColorRect" parent="."]
+offset_left = -72.0
+offset_top = -56.0
+offset_right = 1968.0
+offset_bottom = 1160.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yyocw")
+}

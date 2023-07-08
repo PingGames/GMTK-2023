@@ -1,21 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://bujo6ub518osc"]
+[gd_scene load_steps=10 format=3 uid="uid://d354ml5b8iuq3"]
 
-[ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="1_cmlqc"]
-[ext_resource type="Script" path="res://scripts/welcome-screen.gd" id="1_p4mch"]
-[ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="2_uqn82"]
-[ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="3_7sout"]
-[ext_resource type="StyleBox" uid="uid://ctjojhhv3g87d" path="res://styles/button-hover.tres" id="3_h4hl2"]
-[ext_resource type="LabelSettings" uid="uid://daa1p1mepc16f" path="res://styles/label-title.tres" id="3_y55dd"]
-[ext_resource type="StyleBox" uid="uid://bq7if880pxh6l" path="res://styles/button-pressed.tres" id="4_e0c3e"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_fc3kp"]
+[ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="2_r3h58"]
+[ext_resource type="LabelSettings" uid="uid://daa1p1mepc16f" path="res://styles/label-title.tres" id="3_k88j8"]
+[ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="4_kgmoi"]
+[ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="5_jbxj1"]
+[ext_resource type="StyleBox" uid="uid://ctjojhhv3g87d" path="res://styles/button-hover.tres" id="6_y57jc"]
+[ext_resource type="StyleBox" uid="uid://bq7if880pxh6l" path="res://styles/button-pressed.tres" id="7_wbeo0"]
 
 [sub_resource type="Theme" id="Theme_trjcu"]
-default_font = ExtResource("1_cmlqc")
+default_font = ExtResource("2_r3h58")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ihods"]
 content_margin_left = 40.0
 
 [node name="WelcomeScreen" type="Node2D"]
-script = ExtResource("1_p4mch")
+script = ExtResource("1_fc3kp")
 
 [node name="Background" type="ColorRect" parent="."]
 offset_right = 1931.0
@@ -44,7 +44,7 @@ theme_override_colors/font_color = Color(0.505882, 0.580392, 0.278431, 1)
 theme_override_font_sizes/font_size = 125
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ihods")
 text = "Humansters"
-label_settings = ExtResource("3_y55dd")
+label_settings = ExtResource("3_k88j8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -65,12 +65,12 @@ mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0.709804, 0.34902, 0.270588, 1)
 theme_override_colors/font_pressed_color = Color(0.945098, 0.964706, 0.941176, 1)
 theme_override_colors/font_hover_color = Color(0.945098, 0.964706, 0.941176, 1)
-theme_override_fonts/font = ExtResource("3_7sout")
+theme_override_fonts/font = ExtResource("4_kgmoi")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = ExtResource("2_uqn82")
-theme_override_styles/hover = ExtResource("3_h4hl2")
-theme_override_styles/pressed = ExtResource("4_e0c3e")
-theme_override_styles/focus = ExtResource("3_h4hl2")
+theme_override_styles/normal = ExtResource("5_jbxj1")
+theme_override_styles/hover = ExtResource("6_y57jc")
+theme_override_styles/pressed = ExtResource("7_wbeo0")
+theme_override_styles/focus = ExtResource("6_y57jc")
 text = "Play"
 alignment = 0
 
@@ -82,12 +82,12 @@ mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0.709804, 0.34902, 0.270588, 1)
 theme_override_colors/font_pressed_color = Color(0.945098, 0.964706, 0.941176, 1)
 theme_override_colors/font_hover_color = Color(0.945098, 0.964706, 0.941176, 1)
-theme_override_fonts/font = ExtResource("3_7sout")
+theme_override_fonts/font = ExtResource("4_kgmoi")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = ExtResource("2_uqn82")
-theme_override_styles/hover = ExtResource("3_h4hl2")
-theme_override_styles/pressed = ExtResource("4_e0c3e")
-theme_override_styles/focus = ExtResource("3_h4hl2")
+theme_override_styles/normal = ExtResource("5_jbxj1")
+theme_override_styles/hover = ExtResource("6_y57jc")
+theme_override_styles/pressed = ExtResource("7_wbeo0")
+theme_override_styles/focus = ExtResource("6_y57jc")
 text = "Quit"
 
 [node name="CreditsButton" type="Button" parent="Container/VBoxContainer/VBoxContainer"]
@@ -98,12 +98,12 @@ mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0.709804, 0.34902, 0.270588, 1)
 theme_override_colors/font_pressed_color = Color(0.945098, 0.964706, 0.941176, 1)
 theme_override_colors/font_hover_color = Color(0.945098, 0.964706, 0.941176, 1)
-theme_override_fonts/font = ExtResource("3_7sout")
+theme_override_fonts/font = ExtResource("4_kgmoi")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = ExtResource("2_uqn82")
-theme_override_styles/hover = ExtResource("3_h4hl2")
-theme_override_styles/pressed = ExtResource("4_e0c3e")
-theme_override_styles/focus = ExtResource("3_h4hl2")
+theme_override_styles/normal = ExtResource("5_jbxj1")
+theme_override_styles/hover = ExtResource("6_y57jc")
+theme_override_styles/pressed = ExtResource("7_wbeo0")
+theme_override_styles/focus = ExtResource("6_y57jc")
 text = "Credits"
 
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
