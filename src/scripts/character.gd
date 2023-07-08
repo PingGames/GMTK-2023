@@ -62,5 +62,4 @@ func _physics_process(delta):
 
 
 func _on_finished_trigger_body_entered(body):
-	# TODO: Replace the scene with the "Yippee!" screen
-	SceneTransition.change_scene_to_file("res://scenes/welcome-screen.tscn")
+	SceneTransition.change_scene_to_file("res://scenes/yippee-screen.tscn", 0.5)

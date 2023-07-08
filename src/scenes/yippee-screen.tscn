@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dxovsjssmmnny"]
 
-[ext_resource type="Script" path="res://scripts/you-got-caught-screen.gd" id="1_3hmgj"]
+[ext_resource type="Script" path="res://scripts/yippee-screen.gd" id="1_muaim"]
 [ext_resource type="Texture2D" uid="uid://cyovlw6bv0f13" path="res://sprites/you-got-caught-screen.png" id="2_cqtnw"]
 [ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="3_a8pdj"]
 [ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="4_4bma8"]
@@ -20,7 +20,7 @@ content_margin_left = 40.0
 content_margin_left = 40.0
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_3hmgj")
+script = ExtResource("1_muaim")
 
 [node name="Background" type="ColorRect" parent="."]
 offset_right = 1931.0
