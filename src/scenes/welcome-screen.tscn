@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=3 uid="uid://bujo6ub518osc"]
+
+[ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="1_cmlqc"]
+[ext_resource type="Script" path="res://scripts/welcome-screen.gd" id="1_p4mch"]
+[ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="2_uqn82"]
+[ext_resource type="StyleBox" uid="uid://ctjojhhv3g87d" path="res://styles/button-hover.tres" id="3_h4hl2"]
+[ext_resource type="StyleBox" uid="uid://bq7if880pxh6l" path="res://styles/button-pressed.tres" id="4_e0c3e"]
+
+[sub_resource type="Theme" id="Theme_ownec"]
+default_font = ExtResource("1_cmlqc")
+
+[node name="WelcomeScreen" type="Node2D"]
+script = ExtResource("1_p4mch")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1163.0
+offset_bottom = 659.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.188235, 0.219608, 0.262745, 1)
+
+[node name="Container" type="MarginContainer" parent="."]
+offset_right = 1164.0
+offset_bottom = 671.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container"]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_ownec")
+theme_override_colors/font_color = Color(0.505882, 0.580392, 0.278431, 1)
+theme_override_font_sizes/font_size = 125
+text = "Humansters"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ColorRect" type="ColorRect" parent="Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ButtonGroup" type="VBoxContainer" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="StartButton" type="Button" parent="Container/VBoxContainer/ButtonGroup"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.709804, 0.34902, 0.270588, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cmlqc")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("2_uqn82")
+theme_override_styles/hover = ExtResource("3_h4hl2")
+theme_override_styles/pressed = ExtResource("4_e0c3e")
+theme_override_styles/focus = ExtResource("3_h4hl2")
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="Container/VBoxContainer/ButtonGroup"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.709804, 0.34902, 0.270588, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cmlqc")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("2_uqn82")
+theme_override_styles/hover = ExtResource("3_h4hl2")
+theme_override_styles/pressed = ExtResource("4_e0c3e")
+theme_override_styles/focus = ExtResource("3_h4hl2")
+text = "Quit"
+
+[node name="CreditsButton" type="Button" parent="Container/VBoxContainer/ButtonGroup"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.709804, 0.34902, 0.270588, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_cmlqc")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = ExtResource("2_uqn82")
+theme_override_styles/hover = ExtResource("3_h4hl2")
+theme_override_styles/pressed = ExtResource("4_e0c3e")
+theme_override_styles/focus = ExtResource("3_h4hl2")
+text = "Credits"
+
+[connection signal="pressed" from="Container/VBoxContainer/ButtonGroup/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/ButtonGroup/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/ButtonGroup/CreditsButton" to="." method="_on_credits_button_pressed"]
