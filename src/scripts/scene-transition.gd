@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 
-func change_scene_to_file(target: String, delay: float = 0.0) -> void:
+func change_scene_to_file(target: String, delay: float = 1.0) -> void:
 	$AnimationPlayer.play("dissolve")
 	
 	await $AnimationPlayer.animation_finished

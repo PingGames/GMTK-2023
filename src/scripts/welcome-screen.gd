@@ -2,7 +2,7 @@ extends Node2D
 
 
 func _on_start_button_pressed():
-	SceneTransition.change_scene_to_file("res://scenes/level.tscn", 1.0)
+	SceneTransition.change_scene_to_file("res://scenes/level.tscn")
 
 
 func _on_quit_button_pressed():
