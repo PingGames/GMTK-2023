@@ -22,7 +22,6 @@ SceneTransition="*res://scenes/scene-transition.tscn"
 [display]
 
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
 
 [input]
 

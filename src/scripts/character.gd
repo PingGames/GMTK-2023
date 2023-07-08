@@ -35,6 +35,9 @@ func _physics_process(delta):
 		velocity.y = 0.0
 	elif is_idling or is_running:
 		_jumps_made = 0
+		
+	if is_idling:
+		$AnimationPlayer.play("idle")
 	
 	move_and_slide()
 
