@@ -35,9 +35,24 @@ func _physics_process(delta):
 		velocity.y = 0.0
 	elif is_idling or is_running:
 		_jumps_made = 0
-		
-	if is_idling:
+	
+	
+	if is_jumping or is_double_jumping:
+		$RigSide.show()
+		$RigFront.hide()
+		$AnimationPlayer.play("jump")
+	elif is_idling:
+		$RigFront.show()
+		$RigSide.hide()
 		$AnimationPlayer.play("idle")
+	elif is_running:
+		$RigSide.show()
+		$RigFront.hide()
+		$AnimationPlayer.play("walk")
+	elif is_falling:
+		$RigSide.show()
+		$RigFront.hide()
+		$AnimationPlayer.play("fall")
 	
 	move_and_slide()
 
