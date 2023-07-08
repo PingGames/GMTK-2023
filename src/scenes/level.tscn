@@ -25,6 +25,10 @@ sources/0 = SubResource("TileSetAtlasSource_wqyu5")
 [node name="Character" parent="." instance=ExtResource("1_ngp3p")]
 position = Vector2(122, 147)
 
+[node name="Camera2D" type="Camera2D" parent="Character"]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_2bco6")
 format = 2
