@@ -38,6 +38,13 @@ jump={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="floor"
+2d_physics/layer_2="character"
+2d_physics/layer_3="finished_area"
+2d_physics/layer_4="objects"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

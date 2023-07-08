@@ -37,3 +37,8 @@ func _physics_process(delta):
 		_jumps_made = 0
 	
 	move_and_slide()
+
+
+func _on_finished_trigger_body_entered(body):
+	# TODO: Replace the scene with the "Yippee!" screen
+	get_tree().change_scene_to_file("res://scenes/welcome-screen.tscn")
