@@ -21,7 +21,7 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 	
 	var is_falling := velocity.y > 0.0 and not is_on_floor()
-	var is_jumping := Input.is_action_just_released("jump") and is_on_floor()
+	var is_jumping := Input.is_action_just_pressed("jump") and is_on_floor()
 	var is_double_jumping := Input.is_action_just_released("jump") and is_falling
 	var is_jump_cancelled := Input.is_action_just_released("jump") and velocity.y > 0.0
 	var is_idling := is_on_floor() and is_zero_approx(velocity.x)
@@ -36,23 +36,27 @@ func _physics_process(delta):
 	elif is_idling or is_running:
 		_jumps_made = 0
 	
+	if horizontal_direction == 1:
+		$Character.scale.x = 1
+	elif horizontal_direction == -1:
+		$Character.scale.x = -1
 	
 	if is_jumping or is_double_jumping:
-		$RigSide.show()
-		$RigFront.hide()
-		$AnimationPlayer.play("jump")
+		$Character/RigSide.show()
+		$Character/RigFront.hide()
+		$Character/AnimationPlayer.play("jump")
 	elif is_idling:
-		$RigFront.show()
-		$RigSide.hide()
-		$AnimationPlayer.play("idle")
+		$Character/RigFront.show()
+		$Character/RigSide.hide()
+		$Character/AnimationPlayer.play("idle")
 	elif is_running:
-		$RigSide.show()
-		$RigFront.hide()
-		$AnimationPlayer.play("walk")
+		$Character/RigSide.show()
+		$Character/RigFront.hide()
+		$Character/AnimationPlayer.play("walk")
 	elif is_falling:
-		$RigSide.show()
-		$RigFront.hide()
-		$AnimationPlayer.play("fall")
+		$Character/RigSide.show()
+		$Character/RigFront.hide()
+		$Character/AnimationPlayer.play("fall")
 	
 	move_and_slide()
 

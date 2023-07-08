@@ -29,6 +29,7 @@ size = Vector2(124, 924.25)
 [node name="Character" parent="." instance=ExtResource("1_ngp3p")]
 position = Vector2(122, 147)
 scale = Vector2(0.28, 0.28)
+speed = 400.0
 
 [node name="Camera" type="Camera2D" parent="Character"]
 position_smoothing_enabled = true
