@@ -1,22 +1,22 @@
 # Humanster &ndash; GMTK-2023
 
-A repository for our submission to the GTMK Game Jam 2023. This year's\
+A repository for our submission to the GTMK Game Jam 2023. This year's
 theme is "Reversed Roles".
 
 ## Our idea
 
-We live in a parallel universe where animals have humans as their as\
-their pets. Our character is the housepet of a hamster child and\
-resides in a in a cage in their room, when one day they discover that\
-the door has not been closed properly. Since they have never been\
-outside of their cage, our hero is very curious and would like to\
+We live in a parallel universe where animals have humans as
+their pets. Our character is the housepet of a hamster child and
+resides in a cage in their room, when one day they discover that
+the door has not been closed properly. Since they have never been
+outside of their cage, our hero is very curious and would like to
 explore the outer world.
 
-But beware of the *Humansters!* These very human-like hamsters will\
+But beware of the *Humansters!* These very human-like hamsters will
 take you back to your cage as soon as they see you.
 
-Start exploring a cozy world with a small character and a huge\
-environment on your way to freedom!
+Start exploring a cozy world with a small character and a huge
+environment on their way to freedom!
 
 ## License
 
