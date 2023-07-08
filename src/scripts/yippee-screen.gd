@@ -1,7 +1,7 @@
 extends Node2D
 
 
-func _on_play_again_button_pressed():
+func _on_retry_button_pressed():
 	SceneTransition.change_scene_to_file("res://scenes/level.tscn")
 
 

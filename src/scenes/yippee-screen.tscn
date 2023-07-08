@@ -85,7 +85,7 @@ layout_mode = 2
 [node name="Spacer2" type="ColorRect" parent="Container/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="RetryButton" type="Button" parent="Container/VBoxContainer/HBoxContainer"]
+[node name="PlayAgainButton" type="Button" parent="Container/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
@@ -99,7 +99,7 @@ theme_override_styles/normal = ExtResource("4_4bma8")
 theme_override_styles/hover = ExtResource("5_mvstt")
 theme_override_styles/pressed = ExtResource("6_8o38e")
 theme_override_styles/focus = ExtResource("5_mvstt")
-text = "Retry"
+text = "Play again"
 alignment = 0
 
 [node name="MenuButton" type="Button" parent="Container/VBoxContainer/HBoxContainer"]
@@ -118,5 +118,5 @@ theme_override_styles/pressed = ExtResource("6_8o38e")
 theme_override_styles/focus = ExtResource("5_mvstt")
 text = "Menu"
 
-[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
