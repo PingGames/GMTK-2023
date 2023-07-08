@@ -10,5 +10,4 @@ func _on_quit_button_pressed():
 
 
 func _on_credits_button_pressed():
-	# TODO: Add this scene
-	pass
+	SceneTransition.change_scene_to_file("res://scenes/credits-screen.tscn", 0.0)

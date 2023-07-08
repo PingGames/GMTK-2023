@@ -5,6 +5,7 @@
 [ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="2_uqn82"]
 [ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="3_7sout"]
 [ext_resource type="StyleBox" uid="uid://ctjojhhv3g87d" path="res://styles/button-hover.tres" id="3_h4hl2"]
+[ext_resource type="LabelSettings" uid="uid://daa1p1mepc16f" path="res://styles/label-title.tres" id="3_y55dd"]
 [ext_resource type="StyleBox" uid="uid://bq7if880pxh6l" path="res://styles/button-pressed.tres" id="4_e0c3e"]
 
 [sub_resource type="Theme" id="Theme_trjcu"]
@@ -12,13 +13,6 @@ default_font = ExtResource("1_cmlqc")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ihods"]
 content_margin_left = 40.0
-
-[sub_resource type="LabelSettings" id="LabelSettings_dckaf"]
-font = ExtResource("3_7sout")
-font_size = 226
-font_color = Color(0.870588, 0.623529, 0.278431, 1)
-shadow_color = Color(0, 0, 0, 0.0784314)
-shadow_offset = Vector2(4, 4)
 
 [node name="WelcomeScreen" type="Node2D"]
 script = ExtResource("1_p4mch")
@@ -50,7 +44,7 @@ theme_override_colors/font_color = Color(0.505882, 0.580392, 0.278431, 1)
 theme_override_font_sizes/font_size = 125
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ihods")
 text = "Humansters"
-label_settings = SubResource("LabelSettings_dckaf")
+label_settings = ExtResource("3_y55dd")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -117,4 +111,5 @@ text = "Credits"
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_retry_button_pressed" flags=18]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_menu_button_pressed" flags=18]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_menu_button_pressed" flags=18]

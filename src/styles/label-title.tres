@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://daa1p1mepc16f"]
+
+[ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="1_n7j8j"]
+
+[resource]
+font = ExtResource("1_n7j8j")
+font_size = 226
+font_color = Color(0.870588, 0.623529, 0.278431, 1)
+shadow_color = Color(0, 0, 0, 0.0784314)
+shadow_offset = Vector2(4, 4)

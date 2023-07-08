@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cyovlw6bv0f13" path="res://sprites/you-got-caught-screen.png" id="2_cqtnw"]
 [ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="3_a8pdj"]
 [ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="4_4bma8"]
+[ext_resource type="LabelSettings" uid="uid://daa1p1mepc16f" path="res://styles/label-title.tres" id="4_sphhl"]
 [ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="4_tjx1b"]
 [ext_resource type="LabelSettings" uid="uid://18lf4n41ffca" path="res://styles/label-text.tres" id="5_13c4k"]
 [ext_resource type="StyleBox" uid="uid://ctjojhhv3g87d" path="res://styles/button-hover.tres" id="5_mvstt"]
@@ -14,13 +15,6 @@ default_font = ExtResource("3_a8pdj")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7t3sb"]
 content_margin_left = 40.0
-
-[sub_resource type="LabelSettings" id="LabelSettings_anq2g"]
-font = ExtResource("4_tjx1b")
-font_size = 226
-font_color = Color(0.870588, 0.623529, 0.278431, 1)
-shadow_color = Color(0, 0, 0, 0.0784314)
-shadow_offset = Vector2(4, 4)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3ktg"]
 content_margin_left = 40.0
@@ -55,7 +49,7 @@ theme_override_colors/font_color = Color(0.505882, 0.580392, 0.278431, 1)
 theme_override_font_sizes/font_size = 125
 theme_override_styles/normal = SubResource("StyleBoxEmpty_7t3sb")
 text = "Yippee!"
-label_settings = SubResource("LabelSettings_anq2g")
+label_settings = ExtResource("4_sphhl")
 vertical_alignment = 1
 
 [node name="ColorRect2" type="ColorRect" parent="Container/VBoxContainer"]
