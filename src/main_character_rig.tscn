@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6x054grel2wm"]
+
+[ext_resource type="Texture2D" uid="uid://gn6s5wkjl5e7" path="res://body_front.png" id="1_71ver"]
+[ext_resource type="Texture2D" uid="uid://cok0fbgvr8krg" path="res://head_front.png" id="2_1eabh"]
+[ext_resource type="Texture2D" uid="uid://bj2hb11ohijd" path="res://left-arm_front.png" id="3_1m8lw"]
+[ext_resource type="Texture2D" uid="uid://ljwk7qe7t8ja" path="res://right-arm_front.png" id="4_xdtoo"]
+[ext_resource type="Texture2D" uid="uid://cexywwrkm42dh" path="res://left-leg_front.png" id="5_2bq2g"]
+[ext_resource type="Texture2D" uid="uid://n3fj1gfp6uls" path="res://right-leg_front.png" id="6_8yfwx"]
+
+[node name="main_character_rig" type="Node2D"]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="bone_body" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D(1, 0, 0, 1, 0, 0)
+
+[node name="body" type="Sprite2D" parent="Skeleton2D/bone_body"]
+position = Vector2(-1, -152)
+texture = ExtResource("1_71ver")
+
+[node name="bone_head" type="Bone2D" parent="Skeleton2D/bone_body"]
+position = Vector2(0, -504)
+rest = Transform2D(1, 0, 0, 1, 0, -504)
+
+[node name="head" type="Sprite2D" parent="Skeleton2D/bone_body/bone_head"]
+position = Vector2(-32, 23)
+texture = ExtResource("2_1eabh")
+
+[node name="bone_left_arm_up" type="Bone2D" parent="Skeleton2D/bone_body"]
+position = Vector2(-102, -294)
+rest = Transform2D(1, 0, 0, 1, -102, -294)
+
+[node name="left_arm" type="Sprite2D" parent="Skeleton2D/bone_body/bone_left_arm_up"]
+position = Vector2(-52, 152)
+texture = ExtResource("3_1m8lw")
+
+[node name="bone_right_arm_up" type="Bone2D" parent="Skeleton2D/bone_body"]
+position = Vector2(73, -299)
+rest = Transform2D(1, 0, 0, 1, 73, -299)
+
+[node name="right_arm" type="Sprite2D" parent="Skeleton2D/bone_body/bone_right_arm_up"]
+position = Vector2(77, 150)
+texture = ExtResource("4_xdtoo")
+
+[node name="bone_left_leg_up" type="Bone2D" parent="Skeleton2D/bone_body"]
+position = Vector2(-123, -1)
+rest = Transform2D(1, 0, 0, 1, -123, -1)
+auto_calculate_length_and_angle = false
+length = 108.44
+bone_angle = -255.904
+
+[node name="left_leg" type="Sprite2D" parent="Skeleton2D/bone_body/bone_left_leg_up"]
+position = Vector2(-33, 121)
+texture = ExtResource("5_2bq2g")
+
+[node name="bone_left_leg_down" type="Bone2D" parent="Skeleton2D/bone_body/bone_left_leg_up"]
+position = Vector2(-26, 121)
+rest = Transform2D(1, 0, 0, 1, -26, 121)
+auto_calculate_length_and_angle = false
+length = 114.558
+bone_angle = 78.072
+
+[node name="bone_left_foot" type="Bone2D" parent="Skeleton2D/bone_body/bone_left_leg_up/bone_left_leg_down"]
+position = Vector2(23, 112)
+rest = Transform2D(1, 0, 0, 1, 23, 112)
+auto_calculate_length_and_angle = false
+length = 65.511
+bone_angle = -186.506
+
+[node name="bone_rigt_leg_up" type="Bone2D" parent="Skeleton2D/bone_body"]
+position = Vector2(134, -12)
+rest = Transform2D(1, 0, 0, 1, 134, -12)
+auto_calculate_length_and_angle = false
+length = 114.603
+bone_angle = 73.735
+
+[node name="right_leg" type="Sprite2D" parent="Skeleton2D/bone_body/bone_rigt_leg_up"]
+position = Vector2(36, 123)
+texture = ExtResource("6_8yfwx")
+
+[node name="bone_right_leg_down" type="Bone2D" parent="Skeleton2D/bone_body/bone_rigt_leg_up"]
+position = Vector2(30, 123)
+rest = Transform2D(1, 0, 0, 1, 30, 123)
+auto_calculate_length_and_angle = false
+length = 114.602
+bone_angle = -255.904
+
+[node name="bone_right_foot" type="Bone2D" parent="Skeleton2D/bone_body/bone_rigt_leg_up/bone_right_leg_down"]
+position = Vector2(-27, 113)
+rest = Transform2D(1, 0, 0, 1, -27, 113)
+auto_calculate_length_and_angle = false
+length = 71.464
+bone_angle = 4.337
