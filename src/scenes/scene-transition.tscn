@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7ntv3vf1ftqw"]
+
+[ext_resource type="Script" path="res://scripts/scene-transition.gd" id="1_bxclp"]
+
+[sub_resource type="Animation" id="Animation_qi77o"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hdb56"]
+resource_name = "dissolve"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Overlay:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1.7411, 0.392292),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rg5ff"]
+_data = {
+"RESET": SubResource("Animation_qi77o"),
+"dissolve": SubResource("Animation_hdb56")
+}
+
+[node name="SceneTransition" type="CanvasLayer"]
+scale = Vector2(17.66, 17.66)
+transform = Transform2D(17.66, 0, 0, 17.66, 0, 0)
+script = ExtResource("1_bxclp")
+
+[node name="Overlay" type="ColorRect" parent="."]
+offset_right = 170.0
+offset_bottom = 120.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rg5ff")
+}
