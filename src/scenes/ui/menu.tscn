@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://d354ml5b8iuq3"]
+[gd_scene load_steps=9 format=3 uid="uid://d354ml5b8iuq3"]
 
 [ext_resource type="Script" path="res://scripts/ui/menu.gd" id="1_fc3kp"]
-[ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="2_r3h58"]
 [ext_resource type="LabelSettings" uid="uid://daa1p1mepc16f" path="res://styles/label-title.tres" id="3_k88j8"]
 [ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="4_kgmoi"]
 [ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="5_jbxj1"]
@@ -9,7 +8,6 @@
 [ext_resource type="StyleBox" uid="uid://bq7if880pxh6l" path="res://styles/button-pressed.tres" id="7_wbeo0"]
 
 [sub_resource type="Theme" id="Theme_trjcu"]
-default_font = ExtResource("2_r3h58")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ihods"]
 content_margin_left = 40.0
@@ -107,9 +105,9 @@ theme_override_styles/focus = ExtResource("6_y57jc")
 text = "Credits"
 
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_retry_button_pressed" flags=18]
-[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_try_again_button_pressed" flags=18]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_menu_button_pressed" flags=18]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_try_again_button_pressed" flags=18]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_menu_button_pressed" flags=18]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_menu_button_pressed" flags=18]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_menu_button_pressed" flags=18]

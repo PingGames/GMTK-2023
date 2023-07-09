@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ca1v3e64arkk4"]
+
+[ext_resource type="Script" path="res://music.gd" id="1_wwkrn"]
+[ext_resource type="AudioStream" uid="uid://ciseu8benvfkf" path="res://sounds/music/Florist.mp3" id="2_kbxci"]
+
+[node name="Music" type="CanvasLayer"]
+script = ExtResource("1_wwkrn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_kbxci")
