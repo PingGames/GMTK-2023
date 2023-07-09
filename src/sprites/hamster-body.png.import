@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://b68ipnrv4120f"
-=======
-uid="uid://bvdxm1rudq6k6"
->>>>>>> origin/artwork
-path="res://.godot/imported/title.png-d1ba65feb3cac83b178b903b58b70b4c.ctex"
+uid="uid://ux2ic6aq5e67"
+path="res://.godot/imported/hamster-body.png-6ee69e45cb689a0bf26bd9356e3c6472.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ui/title.png"
-dest_files=["res://.godot/imported/title.png-d1ba65feb3cac83b178b903b58b70b4c.ctex"]
+source_file="res://sprites/hamster-body.png"
+dest_files=["res://.godot/imported/hamster-body.png-6ee69e45cb689a0bf26bd9356e3c6472.ctex"]
 
 [params]
 
