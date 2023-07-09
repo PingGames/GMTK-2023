@@ -1,5 +1,3 @@
-# Humansters &ndash; GMTK-2023
-
 ![alt text](https://github.com/PingGames/GMTK-2023/blob/development/src/sprites/ui/title.png)
 
 A repository for our submission to the GTMK Game Jam 2023. This year's\
@@ -38,3 +36,10 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License\
 along with this program.  If not, see [https://www.gnu.org/licenses/](https://www.gnu.org/licenses/).
+
+## Screenshots
+
+![alt text](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-1.png)
+![alt text](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-2.png)
+![alt text](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-3.png)
+![alt text](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-4.png)
