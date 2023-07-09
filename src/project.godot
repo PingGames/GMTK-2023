@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="GMTK 2023"
-run/main_scene="res://scenes/intro.tscn"
+run/main_scene="res://scenes/ui/intro.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 SceneTransition="*res://scenes/scene-transition.tscn"
+Music="*res://scenes/music.tscn"
 
 [display]
 
@@ -52,7 +53,7 @@ shift={
 
 2d_physics/layer_1="floor"
 2d_physics/layer_2="character"
-2d_physics/layer_3="finished_area"
+2d_physics/layer_3="triggers"
 2d_physics/layer_4="objects"
 
 [rendering]

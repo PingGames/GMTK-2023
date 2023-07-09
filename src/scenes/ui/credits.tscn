@@ -1,0 +1,113 @@
+[gd_scene load_steps=11 format=3 uid="uid://61jf3ecmbs4e"]
+
+[ext_resource type="Script" path="res://scripts/ui/credits.gd" id="1_k8hya"]
+[ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="2_rpo15"]
+[ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="3_dkco6"]
+[ext_resource type="LabelSettings" uid="uid://18lf4n41ffca" path="res://styles/label-text.tres" id="4_gmq26"]
+[ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="5_vryhx"]
+[ext_resource type="StyleBox" uid="uid://ctjojhhv3g87d" path="res://styles/button-hover.tres" id="6_0vdaj"]
+[ext_resource type="StyleBox" uid="uid://bq7if880pxh6l" path="res://styles/button-pressed.tres" id="7_gvt05"]
+
+[sub_resource type="Theme" id="Theme_trjcu"]
+default_font = ExtResource("2_rpo15")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ihods"]
+content_margin_left = 40.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_dckaf"]
+font = ExtResource("3_dkco6")
+font_size = 226
+font_color = Color(0.870588, 0.623529, 0.278431, 1)
+shadow_color = Color(0, 0, 0, 0.0784314)
+shadow_offset = Vector2(4, 4)
+
+[node name="CreditsScreen" type="Node2D"]
+script = ExtResource("1_k8hya")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1931.0
+offset_bottom = 1088.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.945098, 0.964706, 0.941176, 1)
+
+[node name="Container" type="MarginContainer" parent="."]
+offset_right = 1921.0
+offset_bottom = 1088.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container"]
+layout_mode = 2
+alignment = 1
+
+[node name="Spacer" type="ColorRect" parent="Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Title" type="Label" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_trjcu")
+theme_override_colors/font_color = Color(0.505882, 0.580392, 0.278431, 1)
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ihods")
+text = "Credits"
+label_settings = SubResource("LabelSettings_dckaf")
+vertical_alignment = 1
+
+[node name="Spacer2" type="ColorRect" parent="Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Title2" type="Label" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_trjcu")
+theme_override_colors/font_color = Color(0.505882, 0.580392, 0.278431, 1)
+theme_override_font_sizes/font_size = 125
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ihods")
+text = "Creating a game in 48 hours without using additional assets 
+is almost impossible. Although we wrote the scripts and the
+ artwork is made by ouselves, the following sources should not
+be forgotten:
+
+* Music: Lorem ipsum dolor sit amet.
+* Sound Effects: Hello World, hello Universe!
+* ?
+
+This game has been made with Godot 4."
+label_settings = ExtResource("4_gmq26")
+vertical_alignment = 1
+
+[node name="Spacer3" type="ColorRect" parent="Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Container/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 23
+
+[node name="Spacer" type="ColorRect" parent="Container/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Spacer2" type="ColorRect" parent="Container/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="Container/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.709804, 0.34902, 0.270588, 1)
+theme_override_colors/font_pressed_color = Color(0.945098, 0.964706, 0.941176, 1)
+theme_override_colors/font_hover_color = Color(0.945098, 0.964706, 0.941176, 1)
+theme_override_fonts/font = ExtResource("3_dkco6")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("5_vryhx")
+theme_override_styles/hover = ExtResource("6_0vdaj")
+theme_override_styles/pressed = ExtResource("7_gvt05")
+theme_override_styles/focus = ExtResource("6_0vdaj")
+text = "Back"
+alignment = 0
+
+[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
