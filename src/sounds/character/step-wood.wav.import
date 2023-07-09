@@ -2,7 +2,11 @@
 
 importer="wav"
 type="AudioStreamWAV"
+<<<<<<< HEAD
 uid="uid://b0y6k7qmqu0ds"
+=======
+uid="uid://d1ldt6425a3uh"
+>>>>>>> origin/development
 path="res://.godot/imported/step-wood.wav-a5b580a6745fb851d7c2fca03ada24d6.sample"
 
 [deps]
@@ -18,7 +22,11 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
+<<<<<<< HEAD
 edit/loop_mode=0
+=======
+edit/loop_mode=2
+>>>>>>> origin/development
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=0

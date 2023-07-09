@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://bjv4o0bpexhxa"
+=======
+uid="uid://d3f4x7hypdsd"
+>>>>>>> origin/development
 path="res://.godot/imported/hamster.png-4be33581667f4bc8cb06e0aa6357f872.ctex"
 metadata={
 "vram_texture": false

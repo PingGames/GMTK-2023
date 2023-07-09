@@ -9,6 +9,8 @@ const UP_DIRECTION := Vector2.UP
 @export var gravity := 4500.0
 
 var _jumps_made := 0
+var _walk_is_playing = false
+var _run_is_playing = false
 
 
 func _physics_process(delta):
@@ -50,22 +52,56 @@ func _physics_process(delta):
 		$Character/RigSide.show()
 		$Character/RigFront.hide()
 		$Character/AnimationPlayer.play("jump")
+		$JumpSound.play()
+		
+		$WalkOnGrassSound.stop()
+		$WalkOnWoodSound.stop()
+		_walk_is_playing = false
+		_run_is_playing = false
 	elif is_idling:
 		$Character/RigFront.show()
 		$Character/RigSide.hide()
 		$Character/AnimationPlayer.play("idle")
+
+		$WalkOnGrassSound.stop()
+		$WalkOnWoodSound.stop()
+		
+		_walk_is_playing = false
+		_run_is_playing = false
 	elif is_walking:
 		$Character/RigSide.show()
 		$Character/RigFront.hide()
 		$Character/AnimationPlayer.play("walk")
+		
+		$WalkOnWoodSound.pitch_scale = 1.5
+		
+		if not (_run_is_playing or _walk_is_playing):
+			$WalkOnWoodSound.play()
+		
+		_run_is_playing = false
+		_walk_is_playing = true
 	elif is_running:
 		$Character/RigSide.show()
 		$Character/RigFront.hide()
 		$Character/AnimationPlayer.play("run")
+
+		$WalkOnWoodSound.pitch_scale = 1.75
+		
+		if not (_run_is_playing or _walk_is_playing):
+			$WalkOnWoodSound.play()
+		
+		_run_is_playing = true
+		_walk_is_playing = false
 	elif is_falling:
 		$Character/RigSide.show()
 		$Character/RigFront.hide()
 		$Character/AnimationPlayer.play("fall")
+		
+		$WalkOnGrassSound.stop()
+		$WalkOnWoodSound.stop()
+		
+		_walk_is_playing = false
+		_run_is_playing = false
 	
 	move_and_slide()
 

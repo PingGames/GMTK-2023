@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://d354ml5b8iuq3"]
+[gd_scene load_steps=10 format=3 uid="uid://d354ml5b8iuq3"]
 
 [ext_resource type="Script" path="res://scripts/ui/menu.gd" id="1_fc3kp"]
+[ext_resource type="Texture2D" uid="uid://b68ipnrv4120f" path="res://sprites/ui/title.png" id="2_v7qm4"]
 [ext_resource type="LabelSettings" uid="uid://daa1p1mepc16f" path="res://styles/label-title.tres" id="3_k88j8"]
 [ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="4_kgmoi"]
 [ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="5_jbxj1"]
@@ -20,7 +21,16 @@ offset_right = 1931.0
 offset_bottom = 1088.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0.945098, 0.964706, 0.941176, 1)
+color = Color(0.733333, 0.764706, 0.815686, 1)
+
+[node name="DropShadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.0784314)
+position = Vector2(976, 384)
+texture = ExtResource("2_v7qm4")
+
+[node name="TitleImage" type="Sprite2D" parent="."]
+position = Vector2(968, 376)
+texture = ExtResource("2_v7qm4")
 
 [node name="Container" type="MarginContainer" parent="."]
 offset_right = 1921.0
@@ -36,6 +46,7 @@ layout_mode = 2
 color = Color(1, 1, 1, 0)
 
 [node name="Title" type="Label" parent="Container/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme = SubResource("Theme_trjcu")
 theme_override_colors/font_color = Color(0.505882, 0.580392, 0.278431, 1)
@@ -46,7 +57,12 @@ label_settings = ExtResource("3_k88j8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Spacer2" type="ColorRect" parent="Container/VBoxContainer"]
+[node name="Spacer4" type="ColorRect" parent="Container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Spacer3" type="ColorRect" parent="Container/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 color = Color(1, 1, 1, 0)
@@ -104,10 +120,10 @@ theme_override_styles/pressed = ExtResource("7_wbeo0")
 theme_override_styles/focus = ExtResource("6_y57jc")
 text = "Credits"
 
-[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_retry_button_pressed" flags=18]
-[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_try_again_button_pressed" flags=18]
-[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_retry_button_pressed" flags=18]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_menu_button_pressed" flags=18]
-[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_menu_button_pressed" flags=18]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
