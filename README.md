@@ -1,4 +1,4 @@
-# Humanster &ndash; GMTK-2023
+# Humanstesr &ndash; GMTK-2023
 
 A repository for our submission to the GTMK Game Jam 2023. This year's\
 theme is "Reversed Roles".
@@ -20,7 +20,7 @@ environment on their way to freedom!
 
 ## License
 
-Humanster &ndash; a small metroidvenia in a world of reversed roles\
+Humansters &ndash; a small metroidvenia in a world of reversed roles\
 Copyright (C) 2023 PingGames by [@guefra](https://github.com/guefra) 
 &amp; [@guemax](https://github.com/guemax)
 
