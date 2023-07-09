@@ -50,6 +50,7 @@ func _physics_process(delta):
 		$Character/RigSide.show()
 		$Character/RigFront.hide()
 		$Character/AnimationPlayer.play("jump")
+		$JumpSound.play()
 	elif is_idling:
 		$Character/RigFront.show()
 		$Character/RigSide.hide()
