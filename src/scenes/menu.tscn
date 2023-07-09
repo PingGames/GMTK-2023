@@ -106,10 +106,10 @@ theme_override_styles/pressed = ExtResource("7_wbeo0")
 theme_override_styles/focus = ExtResource("6_y57jc")
 text = "Credits"
 
-[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_try_again_button_pressed" flags=18]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_retry_button_pressed" flags=18]
-[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_try_again_button_pressed" flags=18]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_menu_button_pressed" flags=18]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_menu_button_pressed" flags=18]

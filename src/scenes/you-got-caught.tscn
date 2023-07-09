@@ -115,6 +115,6 @@ theme_override_styles/pressed = ExtResource("4_ur6wi")
 theme_override_styles/focus = ExtResource("3_oen6t")
 text = "Menu"
 
-[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/TryAgainButton" to="." method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/TryAgainButton" to="." method="_on_retry_button_pressed" flags=18]
+[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/TryAgainButton" to="." method="_on_try_again_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed" flags=18]
