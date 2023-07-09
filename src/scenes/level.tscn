@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bhuxeqtbkijla"]
+[gd_scene load_steps=12 format=3 uid="uid://bhuxeqtbkijla"]
 
 [ext_resource type="Texture2D" uid="uid://bp6wtsaqcxj4t" path="res://sprites/level/floor-tilemap.png" id="1_gy7g5"]
 [ext_resource type="PackedScene" uid="uid://clmyc8xqu3a0c" path="res://scenes/character.tscn" id="1_ngp3p"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://4l5knkjsrxv4" path="res://sprites/level/hamster-wheel/dynamic-part.png" id="5_er75e"]
 [ext_resource type="Texture2D" uid="uid://b54mjtbdxjhov" path="res://sprites/level/table.png" id="5_l8pka"]
 [ext_resource type="Texture2D" uid="uid://csjdcl8y4rqny" path="res://sprites/level/cage.png" id="6_ewnys"]
+[ext_resource type="AudioStream" uid="uid://85qt3obm58x2" path="res://sounds/5-minutes-of-rain-and-thunderstorm-sounds/5-minutes-of-rain-and-thunderstorm-sounds.mp3" id="7_ptn1t"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gfu0c"]
 bounce = 0.16
@@ -112,5 +113,11 @@ polygon = PackedVector2Array(304, -32, 304, -632, -1496, -640, -1496, 440, -1472
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Cage"]
 polygon = PackedVector2Array(304, 448, 304, 368, 288, 368, 288, 448)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2488, 16)
+stream = ExtResource("7_ptn1t")
+autoplay = true
+max_distance = 100000.0
 
 [connection signal="body_entered" from="FinishedTrigger" to="Character" method="_on_finished_trigger_body_entered"]
