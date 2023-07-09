@@ -1,17 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://dxovsjssmmnny"]
+[gd_scene load_steps=13 format=3 uid="uid://bhqywxgn5s8gm"]
 
-[ext_resource type="Script" path="res://scripts/yippee.gd" id="1_n4xo2"]
-[ext_resource type="Texture2D" uid="uid://duatup5dnvsmm" path="res://sprites/yipee-screen.png" id="2_k76ow"]
-[ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="3_k8bqq"]
-[ext_resource type="LabelSettings" uid="uid://daa1p1mepc16f" path="res://styles/label-title.tres" id="4_ggn6s"]
-[ext_resource type="LabelSettings" uid="uid://18lf4n41ffca" path="res://styles/label-text.tres" id="5_0tp5e"]
-[ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="6_h03wa"]
-[ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="7_m4ml0"]
-[ext_resource type="StyleBox" uid="uid://ctjojhhv3g87d" path="res://styles/button-hover.tres" id="8_nuowq"]
-[ext_resource type="StyleBox" uid="uid://bq7if880pxh6l" path="res://styles/button-pressed.tres" id="9_l63vo"]
+[ext_resource type="Script" path="res://scripts/you-got-caught.gd" id="1_8awui"]
+[ext_resource type="Texture2D" uid="uid://cyovlw6bv0f13" path="res://sprites/you-got-caught-screen.png" id="2_5luuy"]
+[ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="3_67wb6"]
+[ext_resource type="LabelSettings" uid="uid://daa1p1mepc16f" path="res://styles/label-title.tres" id="4_r05de"]
+[ext_resource type="LabelSettings" uid="uid://18lf4n41ffca" path="res://styles/label-text.tres" id="5_cvxf7"]
+[ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="6_kcxnu"]
+[ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="7_06n76"]
+[ext_resource type="StyleBox" uid="uid://ctjojhhv3g87d" path="res://styles/button-hover.tres" id="8_scv4b"]
+[ext_resource type="StyleBox" uid="uid://bq7if880pxh6l" path="res://styles/button-pressed.tres" id="9_omgyp"]
 
 [sub_resource type="Theme" id="Theme_tc7yb"]
-default_font = ExtResource("3_k8bqq")
+default_font = ExtResource("3_67wb6")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7t3sb"]
 content_margin_left = 40.0
@@ -19,8 +19,8 @@ content_margin_left = 40.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3ktg"]
 content_margin_left = 40.0
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource("1_n4xo2")
+[node name="YouGotCaughtScreen" type="Node2D"]
+script = ExtResource("1_8awui")
 
 [node name="Background" type="ColorRect" parent="."]
 offset_right = 1931.0
@@ -35,14 +35,14 @@ offset_bottom = 1088.0
 
 [node name="DropShadow" type="Sprite2D" parent="Container"]
 modulate = Color(0, 0, 0, 0.0784314)
-position = Vector2(1365, 652)
-scale = Vector2(0.553416, 0.553416)
-texture = ExtResource("2_k76ow")
+position = Vector2(1104, 640)
+scale = Vector2(0.891667, 0.891667)
+texture = ExtResource("2_5luuy")
 
 [node name="Image" type="Sprite2D" parent="Container"]
-position = Vector2(1354, 624.5)
-scale = Vector2(0.553416, 0.553416)
-texture = ExtResource("2_k76ow")
+position = Vector2(1083.67, 624.5)
+scale = Vector2(0.891667, 0.891667)
+texture = ExtResource("2_5luuy")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Container"]
 layout_mode = 2
@@ -54,8 +54,9 @@ theme = SubResource("Theme_tc7yb")
 theme_override_colors/font_color = Color(0.505882, 0.580392, 0.278431, 1)
 theme_override_font_sizes/font_size = 125
 theme_override_styles/normal = SubResource("StyleBoxEmpty_7t3sb")
-text = "Yippee!"
-label_settings = ExtResource("4_ggn6s")
+text = "You got
+caught!"
+label_settings = ExtResource("4_r05de")
 vertical_alignment = 1
 
 [node name="ColorRect2" type="ColorRect" parent="Container/VBoxContainer"]
@@ -66,9 +67,11 @@ color = Color(1, 1, 1, 0)
 [node name="Label" type="Label" parent="Container/VBoxContainer"]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxEmpty_w3ktg")
-text = "Great, you did it! Thanks for playing our
-small game, we really appreciate that!"
-label_settings = ExtResource("5_0tp5e")
+text = "Unfortunately, the hamster family has noticed your
+little escape and is taking you back to your cage.
+
+But don't worry, you can always try again!"
+label_settings = ExtResource("5_cvxf7")
 
 [node name="ColorRect" type="ColorRect" parent="Container/VBoxContainer"]
 custom_minimum_size = Vector2(0, 50)
@@ -85,7 +88,7 @@ layout_mode = 2
 [node name="Spacer2" type="ColorRect" parent="Container/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="PlayAgainButton" type="Button" parent="Container/VBoxContainer/HBoxContainer"]
+[node name="TryAgainButton" type="Button" parent="Container/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
@@ -93,13 +96,13 @@ mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0.709804, 0.34902, 0.270588, 1)
 theme_override_colors/font_pressed_color = Color(0.945098, 0.964706, 0.941176, 1)
 theme_override_colors/font_hover_color = Color(0.945098, 0.964706, 0.941176, 1)
-theme_override_fonts/font = ExtResource("6_h03wa")
+theme_override_fonts/font = ExtResource("6_kcxnu")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = ExtResource("7_m4ml0")
-theme_override_styles/hover = ExtResource("8_nuowq")
-theme_override_styles/pressed = ExtResource("9_l63vo")
-theme_override_styles/focus = ExtResource("8_nuowq")
-text = "Play again"
+theme_override_styles/normal = ExtResource("7_06n76")
+theme_override_styles/hover = ExtResource("8_scv4b")
+theme_override_styles/pressed = ExtResource("9_omgyp")
+theme_override_styles/focus = ExtResource("8_scv4b")
+text = "Try again"
 alignment = 0
 
 [node name="MenuButton" type="Button" parent="Container/VBoxContainer/HBoxContainer"]
@@ -110,13 +113,14 @@ mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0.709804, 0.34902, 0.270588, 1)
 theme_override_colors/font_pressed_color = Color(0.945098, 0.964706, 0.941176, 1)
 theme_override_colors/font_hover_color = Color(0.945098, 0.964706, 0.941176, 1)
-theme_override_fonts/font = ExtResource("6_h03wa")
+theme_override_fonts/font = ExtResource("6_kcxnu")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = ExtResource("7_m4ml0")
-theme_override_styles/hover = ExtResource("8_nuowq")
-theme_override_styles/pressed = ExtResource("9_l63vo")
-theme_override_styles/focus = ExtResource("8_nuowq")
+theme_override_styles/normal = ExtResource("7_06n76")
+theme_override_styles/hover = ExtResource("8_scv4b")
+theme_override_styles/pressed = ExtResource("9_omgyp")
+theme_override_styles/focus = ExtResource("8_scv4b")
 text = "Menu"
 
-[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
-[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/TryAgainButton" to="." method="_on_retry_button_pressed" flags=18]
+[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/TryAgainButton" to="." method="_on_try_again_button_pressed"]
+[connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed" flags=18]

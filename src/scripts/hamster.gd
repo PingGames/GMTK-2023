@@ -9,4 +9,4 @@ func _on_enable_body_entered(body):
 
 
 func _on_trigger_body_entered(body):
-	SceneTransition.change_scene_to_file("res://scenes/you-got-caught.tscn")
+	SceneTransition.change_scene_to_file("res://scenes/ui/you-got-caught.tscn")

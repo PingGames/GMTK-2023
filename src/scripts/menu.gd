@@ -10,4 +10,4 @@ func _on_quit_button_pressed():
 
 
 func _on_credits_button_pressed():
-	SceneTransition.change_scene_to_file("res://scenes/credits.tscn")
+	SceneTransition.change_scene_to_file("res://scenes/ui/credits.tscn")

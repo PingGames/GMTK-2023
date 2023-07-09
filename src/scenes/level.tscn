@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://bhuxeqtbkijla"]
 
 [ext_resource type="Texture2D" uid="uid://bp6wtsaqcxj4t" path="res://sprites/level/floor-tilemap.png" id="1_gy7g5"]
-[ext_resource type="PackedScene" uid="uid://clmyc8xqu3a0c" path="res://scenes/character.tscn" id="1_ngp3p"]
+[ext_resource type="PackedScene" uid="uid://clmyc8xqu3a0c" path="res://scenes/players/character.tscn" id="1_ngp3p"]
 [ext_resource type="Texture2D" uid="uid://cjhttpjw0mh5o" path="res://sprites/level/door.png" id="2_y2scu"]
 [ext_resource type="Texture2D" uid="uid://xef6ycelk2dt" path="res://sprites/level/hamster-wheel/static-part.png" id="4_imlg3"]
 [ext_resource type="Texture2D" uid="uid://4l5knkjsrxv4" path="res://sprites/level/hamster-wheel/dynamic-part.png" id="5_er75e"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://c2s73ksxlyqe8" path="res://sprites/level/clothes-hooks.png" id="11_v1114"]
 [ext_resource type="Texture2D" uid="uid://k8qjscnsnx40" path="res://sprites/level/pizza-box-front.png" id="12_ckgdy"]
 [ext_resource type="Texture2D" uid="uid://c5n0afhp67xx1" path="res://sprites/level/gummy-boot.png" id="15_258wm"]
-[ext_resource type="PackedScene" uid="uid://bl85ilb6on5j8" path="res://scenes/hamster.tscn" id="16_hp0gn"]
+[ext_resource type="PackedScene" uid="uid://bl85ilb6on5j8" path="res://scenes/players/hamster.tscn" id="16_hp0gn"]
 [ext_resource type="Texture2D" uid="uid://dit31abrs7563" path="res://sprites/level/sneaker.png" id="16_ljout"]
 [ext_resource type="Texture2D" uid="uid://draoknirunb6c" path="res://sprites/level/door-frame.png" id="19_oprmj"]
 

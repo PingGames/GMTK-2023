@@ -6,4 +6,4 @@ func _on_play_again_button_pressed():
 
 
 func _on_menu_button_pressed():
-	SceneTransition.change_scene_to_file("res://scenes/menu.tscn")
+	SceneTransition.change_scene_to_file("res://scenes/ui/menu.tscn")
