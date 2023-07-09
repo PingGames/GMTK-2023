@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://61jf3ecmbs4e"]
+[gd_scene load_steps=10 format=3 uid="uid://61jf3ecmbs4e"]
 
 [ext_resource type="Script" path="res://scripts/ui/credits.gd" id="1_k8hya"]
-[ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="2_rpo15"]
 [ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="3_dkco6"]
 [ext_resource type="LabelSettings" uid="uid://18lf4n41ffca" path="res://styles/label-text.tres" id="4_gmq26"]
 [ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="5_vryhx"]
@@ -9,7 +8,6 @@
 [ext_resource type="StyleBox" uid="uid://bq7if880pxh6l" path="res://styles/button-pressed.tres" id="7_gvt05"]
 
 [sub_resource type="Theme" id="Theme_trjcu"]
-default_font = ExtResource("2_rpo15")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ihods"]
 content_margin_left = 40.0
@@ -70,9 +68,8 @@ is almost impossible. Although we wrote the scripts and the
  artwork is made by ouselves, the following sources should not
 be forgotten:
 
-* Music: Lorem ipsum dolor sit amet.
-* Sound Effects: Hello World, hello Universe!
-* ?
+* Music: omfgdude — opengameart.org
+* Sound Effects: Ylmir, Lamoot, qubodup — opengameart.org
 
 This game has been made with Godot 4."
 label_settings = ExtResource("4_gmq26")
