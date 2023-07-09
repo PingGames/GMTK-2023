@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bhuxeqtbkijla"]
+[gd_scene load_steps=31 format=3 uid="uid://bhuxeqtbkijla"]
 
 [ext_resource type="Texture2D" uid="uid://bp6wtsaqcxj4t" path="res://sprites/floor-tilemap.png" id="1_fukg1"]
 [ext_resource type="PackedScene" uid="uid://clmyc8xqu3a0c" path="res://scenes/players/character.tscn" id="1_ngp3p"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://csjdcl8y4rqny" path="res://sprites/objects/cage.png" id="18_6wv8f"]
 [ext_resource type="Texture2D" uid="uid://k8qjscnsnx40" path="res://sprites/objects/pizza-box-front.png" id="19_q5ric"]
 [ext_resource type="Texture2D" uid="uid://draoknirunb6c" path="res://sprites/objects/door-frame.png" id="20_axkv4"]
+[ext_resource type="LabelSettings" uid="uid://18lf4n41ffca" path="res://styles/label-text.tres" id="21_l4u0x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8a3sm"]
 size = Vector2(124, 924.25)
@@ -421,5 +422,26 @@ position = Vector2(32104, 1800)
 stream = ExtResource("9_220vf")
 autoplay = true
 max_distance = 25000.0
+
+[node name="Pop up" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Pop up"]
+offset_left = -1496.0
+offset_top = 712.0
+offset_right = -456.0
+offset_bottom = 912.0
+color = Color(0.996078, 0.882353, 0.721569, 1)
+
+[node name="Label" type="Label" parent="Pop up/ColorRect"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 1025.0
+offset_bottom = 188.0
+text = "Someone forgot to close the door!
+Do you know what it looks like outside your cage? No?
+
+Then let's find out!"
+label_settings = ExtResource("21_l4u0x")
 
 [connection signal="body_entered" from="TriggersAndBoundaries/YippeeTrigger" to="Character" method="_on_finished_trigger_body_entered"]

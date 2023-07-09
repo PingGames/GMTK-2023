@@ -57,7 +57,7 @@ custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 color = Color(1, 1, 1, 0)
 
-[node name="Title2" type="Label" parent="Container/VBoxContainer"]
+[node name="Text" type="Label" parent="Container/VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_trjcu")
 theme_override_colors/font_color = Color(0.505882, 0.580392, 0.278431, 1)
@@ -65,11 +65,14 @@ theme_override_font_sizes/font_size = 125
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ihods")
 text = "Creating a game in 48 hours without using additional assets 
 is almost impossible. Although we wrote the scripts and the
- artwork is made by ouselves, the following sources should not
+artwork is made by ouselves, the following sources should not
 be forgotten:
 
 * Music: omfgdude — opengameart.org
 * Sound Effects: Ylmir, Lamoot, qubodup — opengameart.org
+
+Full links can be found in our GitHub repository:
+github.com/PingGames/GMTK-2023
 
 This game has been made with Godot 4."
 label_settings = ExtResource("4_gmq26")
