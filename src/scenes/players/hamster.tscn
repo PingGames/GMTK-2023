@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bl85ilb6on5j8"]
+[gd_scene load_steps=10 format=3 uid="uid://bl85ilb6on5j8"]
 
 [ext_resource type="Script" path="res://scripts/players/hamster.gd" id="1_g7lq0"]
 [ext_resource type="Texture2D" uid="uid://mo5oaaypr31v" path="res://sprites/hamster-foot.png" id="2_n6xmu"]
+[ext_resource type="Texture2D" uid="uid://ux2ic6aq5e67" path="res://sprites/hamster-body.png" id="3_3jsig"]
 [ext_resource type="AudioStream" uid="uid://s6seqk7gycm8" path="res://sounds/character/step-wood-new.mp3" id="3_at6h3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pgwrx"]
@@ -120,6 +121,30 @@ tracks/8/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Legs/Hamster-body:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(752, -1976)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Legs/Hamster-body:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_i0l1x"]
 resource_name = "walk"
@@ -208,6 +233,30 @@ tracks/6/keys = {
 "update": 1,
 "values": [true, true]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Legs/Hamster-body:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.6, 3.8, 5.3, 5.5, 6.5, 8, 8.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(752, -1976), Vector2(776, -2120), Vector2(616, -2064), Vector2(600, -2072), Vector2(472, -2192), Vector2(448, -2152), Vector2(440, -2168)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Legs/Hamster-body:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2.6, 3.8, 5.3, 5.5, 6.5, 8, 8.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0868434, -0.0231073, -0.0254312, -0.124405, 0.000383809, -0.034574]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n4a35"]
 _data = {
@@ -254,6 +303,11 @@ texture = ExtResource("2_n6xmu")
 [node name="LeftLeg" type="Sprite2D" parent="Legs"]
 position = Vector2(1848, 0)
 texture = ExtResource("2_n6xmu")
+
+[node name="Hamster-body" type="Sprite2D" parent="Legs"]
+position = Vector2(752, -1976)
+scale = Vector2(0.750994, 0.797767)
+texture = ExtResource("3_3jsig")
 
 [node name="Legs2" type="Node2D" parent="."]
 visible = false

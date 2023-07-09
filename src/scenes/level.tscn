@@ -104,7 +104,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_ivskd"]
 resource_name = "rotate-fast"
 length = 3.0
-loop_mode = 1
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -253,7 +253,6 @@ position = Vector2(-104, 68.5)
 shape = SubResource("RectangleShape2D_ujafs")
 
 [node name="RotatingAnimations" type="AnimationPlayer" parent="ObjectsBegindCharacter/HamsterWheel"]
-autoplay = "rotate-fast"
 libraries = {
 "": SubResource("AnimationLibrary_lweua")
 }
@@ -398,11 +397,11 @@ limit_right = 30560
 position_smoothing_enabled = true
 
 [node name="Hamster" parent="." instance=ExtResource("16_hp0gn")]
-position = Vector2(10936, 2992)
+position = Vector2(10936, 3152)
 scale = Vector2(0.274527, 0.274527)
 
 [node name="Hamster2" parent="." instance=ExtResource("16_hp0gn")]
-position = Vector2(19968, 2992)
+position = Vector2(19968, 3128)
 scale = Vector2(0.274527, 0.274527)
 
 [node name="ObjectsInFrontOfCharacter" type="Node2D" parent="."]
