@@ -176,6 +176,7 @@ position = Vector2(0, -40)
 texture = ExtResource("4_78uok")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsBegindCharacter/HamsterWheel"]
+polygon = PackedVector2Array(184, 312, 136, 336, 72, 352, -8, 360, -96, 344, -96, -232, -192, -248, -264, -336, -408, -112, -416, 424, -416, 448, -240, 448, 248, 440)
 
 [node name="Table" type="StaticBody2D" parent="ObjectsBegindCharacter"]
 position = Vector2(688, 1784)
