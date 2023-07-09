@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/step-wood-new.mp3-b548ddc120d49b7268f843413f1
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

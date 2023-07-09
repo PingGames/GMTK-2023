@@ -18,3 +18,13 @@ func stop():
 	
 	is_playing = false
 	$AudioStreamPlayer.stop()
+
+
+func play_quieter():
+	$AudioStreamPlayer.volume_db -= 12
+	play()
+
+
+func play_normal():
+	$AudioStreamPlayer.volume_db = 0
+	play()
