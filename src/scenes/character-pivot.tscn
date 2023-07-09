@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bi7j7r37062au"]
+[gd_scene load_steps=34 format=3 uid="uid://bi7j7r37062au"]
 
 [ext_resource type="Texture2D" uid="uid://b7ty5ndkxyuwe" path="res://sprites/character/arm-right-front.png" id="1_7u054"]
 [ext_resource type="Texture2D" uid="uid://ch4sbwvhpuno5" path="res://sprites/character/arm-left-front.png" id="2_if5y1"]
@@ -14,7 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://bcxks0pn85d7l" path="res://sprites/character/leg-right-side.png" id="12_5ljr5"]
 [ext_resource type="Texture2D" uid="uid://sq8h7prib5o0" path="res://sprites/character/leg-left-side.png" id="13_ygntl"]
 [ext_resource type="Texture2D" uid="uid://bg5tgj7it5tyw" path="res://sprites/character/body-side.png" id="14_5sykr"]
-[ext_resource type="Texture2D" uid="uid://ditdglce82clk" path="res://sprites/character/head-side.png" id="15_ad5r3"]
+[ext_resource type="Texture2D" uid="uid://b2ywg8js26f87" path="res://sprites/character/blink-side/nothing.png" id="15_4cmld"]
+[ext_resource type="Texture2D" uid="uid://cutwbq03u4puh" path="res://sprites/character/blink-side/threequarters.png" id="16_jpsua"]
+[ext_resource type="Texture2D" uid="uid://1ht4toymx7k1" path="res://sprites/character/blink-side/full.png" id="17_cm1bi"]
+[ext_resource type="Texture2D" uid="uid://cbybpl38fan4v" path="res://sprites/character/blink-side/onequarter.png" id="18_xjc62"]
+[ext_resource type="Texture2D" uid="uid://ic1at6fsdhoa" path="res://sprites/character/blink-side/half.png" id="19_m4d5b"]
 
 [sub_resource type="SkeletonModification2DTwoBoneIK" id="SkeletonModification2DTwoBoneIK_hrygh"]
 
@@ -1141,6 +1145,206 @@ enabled = true
 modification_count = 1
 modifications/0 = SubResource("SkeletonModification2DTwoBoneIK_b8a23")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_s0ka5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jpsua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cm1bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cm1bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xjc62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jpsua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cm1bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cm1bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_m4d5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jpsua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cm1bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xjc62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4cmld")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
 [node name="Character" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 9
@@ -1379,8 +1583,10 @@ rotation = -0.00341055
 scale = Vector2(1, 1)
 rest = Transform2D(0.999994, -0.00341055, 0.00341055, 0.999994, -11, -186)
 
-[node name="HeadSprite" type="Sprite2D" parent="RigSide/BottomBone/TorsoBone/HeadBone"]
-texture = ExtResource("15_ad5r3")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigSide/BottomBone/TorsoBone/HeadBone"]
+sprite_frames = SubResource("SpriteFrames_s0ka5")
+autoplay = "default"
+frame_progress = 0.922638
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
