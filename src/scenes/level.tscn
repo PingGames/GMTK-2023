@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://fwdw6lx01uae" path="res://sprites/objects/book-1.png" id="6_ouyhb"]
 [ext_resource type="Texture2D" uid="uid://dwyqx5ksrmg3e" path="res://sprites/objects/book-2.png" id="7_l6l38"]
 [ext_resource type="Texture2D" uid="uid://cp4sldn5jaxj4" path="res://sprites/objects/window-frame.png" id="8_hxxcg"]
-[ext_resource type="AudioStream" uid="uid://cvpvghfu7kmut" path="res://sounds/rain/4.mp3" id="9_ey6ov"]
+[ext_resource type="AudioStream" uid="uid://ditw8rr4fwatf" path="res://sounds/rain/3-indoor.mp3" id="9_220vf"]
 [ext_resource type="Texture2D" uid="uid://df0slbt85ryf3" path="res://sprites/objects/ledge-with-plant.png" id="10_7jtq0"]
 [ext_resource type="Texture2D" uid="uid://bxbyco4dqojt2" path="res://sprites/objects/skateboard.png" id="11_jjok5"]
 [ext_resource type="Texture2D" uid="uid://fkusdi3na5od" path="res://sprites/objects/pizza-box-back.png" id="12_buksk"]
@@ -238,9 +238,9 @@ texture = ExtResource("8_hxxcg")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="ObjectsBegindCharacter/Window/Frame"]
 position = Vector2(0, 328)
-stream = ExtResource("9_ey6ov")
+stream = ExtResource("9_220vf")
 autoplay = true
-max_distance = 100000.0
+max_distance = 25000.0
 
 [node name="Ledge" type="StaticBody2D" parent="ObjectsBegindCharacter/Window"]
 position = Vector2(3728, -1192)
@@ -314,7 +314,6 @@ speed = 400.0
 [node name="Camera" type="Camera2D" parent="Character"]
 limit_right = 30560
 position_smoothing_enabled = true
-drag_horizontal_offset = 1.0
 
 [node name="Hamster" parent="." instance=ExtResource("16_hp0gn")]
 position = Vector2(10936, 2992)
@@ -415,5 +414,11 @@ texture = ExtResource("15_4we1a")
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsInFrontOfCharacter/RubberBoot2"]
 visible = false
 polygon = PackedVector2Array(-696, 712, -696, -584, -736, -632, -736, -816, -80, -808, 0, -784, 24, -696, 16, -608, -40, -528, -40, 144, 232, 184, 472, 224, 632, 304, 712, 440, 736, 560, 736, 664, 744, 784, -712, 800)
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(32104, 1800)
+stream = ExtResource("9_220vf")
+autoplay = true
+max_distance = 25000.0
 
 [connection signal="body_entered" from="TriggersAndBoundaries/YippeeTrigger" to="Character" method="_on_finished_trigger_body_entered"]

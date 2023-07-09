@@ -20,7 +20,7 @@ offset_right = 1931.0
 offset_bottom = 1088.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0.945098, 0.964706, 0.941176, 1)
+color = Color(0.733333, 0.764706, 0.815686, 1)
 
 [node name="Container" type="MarginContainer" parent="."]
 offset_right = 1921.0
