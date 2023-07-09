@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://61jf3ecmbs4e"]
 
-[ext_resource type="Script" path="res://scripts/credits.gd" id="1_k8hya"]
+[ext_resource type="Script" path="res://scripts/ui/credits.gd" id="1_k8hya"]
 [ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="2_rpo15"]
 [ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="3_dkco6"]
 [ext_resource type="LabelSettings" uid="uid://18lf4n41ffca" path="res://styles/label-text.tres" id="4_gmq26"]

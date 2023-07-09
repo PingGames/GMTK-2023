@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://clmyc8xqu3a0c"]
 
-[ext_resource type="Script" path="res://scripts/character.gd" id="1_v2qu8"]
+[ext_resource type="Script" path="res://scripts/players/character.gd" id="1_v2qu8"]
 [ext_resource type="PackedScene" uid="uid://bi7j7r37062au" path="res://scenes/players/character-pivot.tscn" id="17_4sk55"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m81f6"]
