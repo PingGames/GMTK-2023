@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/3-indoor.mp3-bbc0f5a2bc43e25c107d19b73a58e65b
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
