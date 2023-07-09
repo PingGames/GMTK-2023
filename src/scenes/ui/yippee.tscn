@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dxovsjssmmnny"]
+[gd_scene load_steps=14 format=3 uid="uid://dxovsjssmmnny"]
 
 [ext_resource type="Script" path="res://scripts/ui/yippee.gd" id="1_5fmcg"]
 [ext_resource type="Texture2D" uid="uid://duatup5dnvsmm" path="res://sprites/ui/yippee.png" id="2_yy34y"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="6_yknfl"]
 [ext_resource type="StyleBox" uid="uid://bjnrrttliskwu" path="res://styles/button-normal.tres" id="7_bblc8"]
 [ext_resource type="StyleBox" uid="uid://ctjojhhv3g87d" path="res://styles/button-hover.tres" id="8_1i6kw"]
+[ext_resource type="AudioStream" uid="uid://byjq314h6spjj" path="res://sounds/character/water-splash.mp3" id="9_0hdni"]
 [ext_resource type="StyleBox" uid="uid://bq7if880pxh6l" path="res://styles/button-pressed.tres" id="9_p505a"]
 
 [sub_resource type="FontFile" id="FontFile_kd8sw"]
@@ -35,7 +36,7 @@ content_margin_left = 40.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3ktg"]
 content_margin_left = 40.0
 
-[node name="Node2D" type="Node2D"]
+[node name="YippeeScreen" type="Node2D"]
 script = ExtResource("1_5fmcg")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -133,6 +134,10 @@ theme_override_styles/hover = ExtResource("8_1i6kw")
 theme_override_styles/pressed = ExtResource("9_p505a")
 theme_override_styles/focus = ExtResource("8_1i6kw")
 text = "Menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_0hdni")
+autoplay = true
 
 [connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]

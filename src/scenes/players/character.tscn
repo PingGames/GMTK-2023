@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://clmyc8xqu3a0c"]
+[gd_scene load_steps=7 format=3 uid="uid://clmyc8xqu3a0c"]
 
 [ext_resource type="Script" path="res://scripts/players/character.gd" id="1_v2qu8"]
 [ext_resource type="AudioStream" uid="uid://bgjrj87mc5uqq" path="res://sounds/character/jump.mp3" id="3_iwos2"]
+[ext_resource type="AudioStream" uid="uid://s6seqk7gycm8" path="res://sounds/character/step-wood-new.mp3" id="4_t8f04"]
+[ext_resource type="AudioStream" uid="uid://btn5bgye1ekee" path="res://sounds/character/step-grass.mp3" id="5_bl44g"]
 [ext_resource type="PackedScene" uid="uid://bi7j7r37062au" path="res://scenes/players/character-pivot.tscn" id="17_4sk55"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m81f6"]
@@ -22,3 +24,11 @@ shape = SubResource("CapsuleShape2D_m81f6")
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_iwos2")
 volume_db = -4.0
+
+[node name="WalkOnWoodSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_t8f04")
+volume_db = -12.0
+pitch_scale = 1.54
+
+[node name="WalkOnGrassSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_bl44g")
