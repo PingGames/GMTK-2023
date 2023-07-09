@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bhuxeqtbkijla"]
+[gd_scene load_steps=30 format=3 uid="uid://bhuxeqtbkijla"]
 
 [ext_resource type="Texture2D" uid="uid://bp6wtsaqcxj4t" path="res://sprites/level/floor-tilemap.png" id="1_gy7g5"]
 [ext_resource type="PackedScene" uid="uid://clmyc8xqu3a0c" path="res://scenes/character.tscn" id="1_ngp3p"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://4l5knkjsrxv4" path="res://sprites/level/hamster-wheel/dynamic-part.png" id="5_er75e"]
 [ext_resource type="Texture2D" uid="uid://b54mjtbdxjhov" path="res://sprites/level/table.png" id="5_l8pka"]
 [ext_resource type="Texture2D" uid="uid://fwdw6lx01uae" path="res://sprites/level/book-1.png" id="5_lyc4m"]
-[ext_resource type="Texture2D" uid="uid://cihfwiyajm5fj" path="res://sprites/droplet.png" id="6_8f703"]
 [ext_resource type="Texture2D" uid="uid://csjdcl8y4rqny" path="res://sprites/level/cage.png" id="6_ewnys"]
 [ext_resource type="Texture2D" uid="uid://dwyqx5ksrmg3e" path="res://sprites/level/book-2.png" id="6_n0xav"]
 [ext_resource type="Texture2D" uid="uid://cp4sldn5jaxj4" path="res://sprites/level/window.png" id="6_nkw7o"]
@@ -65,16 +64,32 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_gfu0c")
 sources/4 = SubResource("TileSetAtlasSource_yrte2")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2cb6r"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1keod"]
 emission_shape = 3
-emission_box_extents = Vector3(1200, 0, 1)
+emission_box_extents = Vector3(1500, 0, 1)
 particle_flag_disable_z = true
-gravity = Vector3(0, 400, 0)
+direction = Vector3(0, 1, 0)
+spread = 5.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 250.0
+initial_velocity_max = 250.0
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 scale_min = 0.1
 scale_max = 2.0
 color = Color(0.776471, 0.894118, 0.905882, 1)
+attractor_interaction_enabled = false
+
+[sub_resource type="Gradient" id="Gradient_7hbqu"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dbet8"]
+gradient = SubResource("Gradient_7hbqu")
+width = 6
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.49, 0.27)
+metadata/_snap_enabled = true
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jmp5w"]
 radius = 80.0
@@ -120,18 +135,18 @@ offset_right = 30392.0
 offset_bottom = 3464.0
 color = Color(0.996078, 0.882353, 0.721569, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="Wall"]
-offset_left = 2416.0
-offset_top = 264.0
-offset_right = 5016.0
-offset_bottom = 3360.0
-color = Color(0.996078, 0.882353, 0.721569, 1)
-
 [node name="ColorRect4" type="ColorRect" parent="Wall"]
 offset_left = 2264.0
 offset_top = -4232.0
 offset_right = 5040.0
 offset_bottom = -2544.0
+color = Color(0.996078, 0.882353, 0.721569, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 2416.0
+offset_top = 264.0
+offset_right = 5016.0
+offset_bottom = 3360.0
 color = Color(0.996078, 0.882353, 0.721569, 1)
 
 [node name="Floor" type="TileMap" parent="."]
@@ -206,18 +221,20 @@ offset_right = 5000.0
 offset_bottom = 176.0
 color = Color(0.188235, 0.219608, 0.262745, 1)
 
+[node name="Rain" type="GPUParticles2D" parent="ObjectsBegindCharacter/Window"]
+position = Vector2(3736, -1600)
+amount = 2500
+process_material = SubResource("ParticleProcessMaterial_1keod")
+texture = SubResource("GradientTexture2D_dbet8")
+lifetime = 7.0
+preprocess = 10.0
+speed_scale = 2.8
+randomness = 0.03
+visibility_rect = Rect2(-2500, -72.045, 5000, 3000)
+
 [node name="Frame" type="Sprite2D" parent="ObjectsBegindCharacter/Window"]
 position = Vector2(3728, -1192)
 texture = ExtResource("6_nkw7o")
-
-[node name="Particles" type="GPUParticles2D" parent="ObjectsBegindCharacter/Window/Frame"]
-position = Vector2(8, -256)
-amount = 10358
-process_material = SubResource("ParticleProcessMaterial_2cb6r")
-texture = ExtResource("6_8f703")
-lifetime = 87.62
-speed_scale = 2.8
-randomness = 0.03
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="ObjectsBegindCharacter/Window/Frame"]
 position = Vector2(0, 328)
@@ -290,7 +307,7 @@ texture = ExtResource("15_258wm")
 polygon = PackedVector2Array(-696, 712, -696, -584, -736, -632, -736, -816, -80, -808, 0, -784, 24, -696, 16, -608, -40, -528, -40, 144, 232, 184, 472, 224, 632, 304, 712, 440, 736, 560, 736, 664, 744, 784, -712, 800)
 
 [node name="Character" parent="." instance=ExtResource("1_ngp3p")]
-position = Vector2(26392, 2064)
+position = Vector2(-760, 16)
 scale = Vector2(0.28, 0.28)
 speed = 400.0
 
