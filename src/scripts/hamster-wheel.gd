@@ -5,12 +5,12 @@ var should_rotate := false
 
 
 func rotate_normal():
-	$AnimationPlayer.play("rotate")
+	$RotatingAnimations.play("rotate")
 
 
 func rotate_fast():
-	$AnimationPlayer.play("rotate-fast")
+	$RotatingAnimations.play("rotate-fast")
 
 
 func stop_rotating():
-	$AnimationPlayer.stop()
+	$RotatingAnimations.stop()
