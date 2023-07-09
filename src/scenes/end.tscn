@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://brd6segr3vg3k"]
+[gd_scene load_steps=9 format=3 uid="uid://brd6segr3vg3k"]
 
 [ext_resource type="PackedScene" uid="uid://clmyc8xqu3a0c" path="res://scenes/character.tscn" id="1_5udv8"]
 [ext_resource type="Script" path="res://scripts/end.gd" id="1_8gyp4"]
 [ext_resource type="Texture2D" uid="uid://dvtdw6k3qhnpo" path="res://sprites/level/outside.png" id="2_hqxso"]
+[ext_resource type="AudioStream" uid="uid://85qt3obm58x2" path="res://sounds/5-minutes-of-rain-and-thunderstorm-sounds/5-minutes-of-rain-and-thunderstorm-sounds.mp3" id="4_yq5v1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_257bs"]
 size = Vector2(1049, 1258)
@@ -80,5 +81,13 @@ preprocess = 10.0
 speed_scale = 2.8
 randomness = 0.03
 visibility_rect = Rect2(-2750, -72.045, 5500, 2000)
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(2592, 1256)
+stream = ExtResource("4_yq5v1")
+autoplay = true
+stream_paused = true
+max_distance = 100000.0
+panning_strength = 0.1
 
 [connection signal="body_entered" from="YippeeTrigger" to="." method="_on_yippee_trigger_body_entered"]

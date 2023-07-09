@@ -33,6 +33,12 @@ color = Color(0.945098, 0.964706, 0.941176, 1)
 offset_right = 1921.0
 offset_bottom = 1088.0
 
+[node name="DropShadow" type="Sprite2D" parent="Container"]
+modulate = Color(0, 0, 0, 0.0784314)
+position = Vector2(1104, 640)
+scale = Vector2(0.891667, 0.891667)
+texture = ExtResource("1_rurgn")
+
 [node name="Image" type="Sprite2D" parent="Container"]
 position = Vector2(1083.67, 624.5)
 scale = Vector2(0.891667, 0.891667)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://dxovsjssmmnny"]
 
 [ext_resource type="Script" path="res://scripts/yippee.gd" id="1_n4xo2"]
-[ext_resource type="Texture2D" uid="uid://cyovlw6bv0f13" path="res://sprites/you-got-caught-screen.png" id="2_iilee"]
+[ext_resource type="Texture2D" uid="uid://duatup5dnvsmm" path="res://sprites/yipee-screen.png" id="2_k76ow"]
 [ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="3_k8bqq"]
 [ext_resource type="LabelSettings" uid="uid://daa1p1mepc16f" path="res://styles/label-title.tres" id="4_ggn6s"]
 [ext_resource type="LabelSettings" uid="uid://18lf4n41ffca" path="res://styles/label-text.tres" id="5_0tp5e"]
@@ -33,10 +33,16 @@ color = Color(0.945098, 0.964706, 0.941176, 1)
 offset_right = 1921.0
 offset_bottom = 1088.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Container"]
-position = Vector2(1083.67, 624.5)
-scale = Vector2(0.891667, 0.891667)
-texture = ExtResource("2_iilee")
+[node name="DropShadow" type="Sprite2D" parent="Container"]
+modulate = Color(0, 0, 0, 0.0784314)
+position = Vector2(1365, 652)
+scale = Vector2(0.553416, 0.553416)
+texture = ExtResource("2_k76ow")
+
+[node name="Image" type="Sprite2D" parent="Container"]
+position = Vector2(1354, 624.5)
+scale = Vector2(0.553416, 0.553416)
+texture = ExtResource("2_k76ow")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Container"]
 layout_mode = 2

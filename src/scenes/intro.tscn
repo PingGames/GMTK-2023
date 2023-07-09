@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bujo6ub518osc"]
+[gd_scene load_steps=13 format=3 uid="uid://bujo6ub518osc"]
 
 [ext_resource type="Script" path="res://scripts/intro.gd" id="1_m0m3k"]
 [ext_resource type="FontFile" uid="uid://cywlilm2g8ve0" path="res://fonts/ubuntu-title/ubuntu-title.ttf" id="2_me3cw"]
 [ext_resource type="FontFile" uid="uid://dd0ycg7u8niwv" path="res://fonts/ubuntu-titling/ubuntu-titling-bold.ttf" id="3_hhuav"]
 [ext_resource type="Texture2D" uid="uid://dh25srcj55h68" path="res://sprites/guemax-logo-circle.png" id="4_2l84s"]
+[ext_resource type="Texture2D" uid="uid://bd5x0l0l467tv" path="res://sprites/guefra-logo.png" id="5_upbab"]
+[ext_resource type="Texture2D" uid="uid://cobaps0oa6bts" path="res://sprites/pinggames-logo.png" id="6_jqc4o"]
 
 [sub_resource type="Theme" id="Theme_trjcu"]
 default_font = ExtResource("2_me3cw")
@@ -230,6 +232,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="DropShadow" type="Sprite2D" parent="LogoGuemax"]
+modulate = Color(0, 0, 0, 0.0784314)
+position = Vector2(984, 560)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_2l84s")
+
 [node name="guemax" type="Sprite2D" parent="LogoGuemax"]
 position = Vector2(960, 540)
 scale = Vector2(0.5, 0.5)
@@ -243,10 +251,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="guemax" type="Sprite2D" parent="LogoGuefra"]
+[node name="DropShadow" type="Sprite2D" parent="LogoGuefra"]
+modulate = Color(0, 0, 0, 0.0784314)
+position = Vector2(984, 560)
+scale = Vector2(1.56214, 1.56214)
+texture = ExtResource("5_upbab")
+
+[node name="guefra" type="Sprite2D" parent="LogoGuefra"]
 position = Vector2(960, 540)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_2l84s")
+scale = Vector2(1.56214, 1.56214)
+texture = ExtResource("5_upbab")
 
 [node name="LogoPingGames" type="MarginContainer" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -256,10 +270,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="guemax" type="Sprite2D" parent="LogoPingGames"]
+[node name="DropShadow" type="Sprite2D" parent="LogoPingGames"]
+modulate = Color(0, 0, 0, 0.0784314)
+position = Vector2(976, 552)
+scale = Vector2(1.47322, 1.47322)
+texture = ExtResource("6_jqc4o")
+
+[node name="PingGames" type="Sprite2D" parent="LogoPingGames"]
 position = Vector2(960, 540)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_2l84s")
+scale = Vector2(1.47322, 1.47322)
+texture = ExtResource("6_jqc4o")
 
 [node name="Overlay" type="ColorRect" parent="."]
 offset_left = -72.0
