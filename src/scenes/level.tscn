@@ -1,8 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://bhuxeqtbkijla"]
+[gd_scene load_steps=37 format=3 uid="uid://bhuxeqtbkijla"]
 
 [ext_resource type="Texture2D" uid="uid://bp6wtsaqcxj4t" path="res://sprites/floor-tilemap.png" id="1_fukg1"]
 [ext_resource type="PackedScene" uid="uid://clmyc8xqu3a0c" path="res://scenes/players/character.tscn" id="1_ngp3p"]
 [ext_resource type="Texture2D" uid="uid://cjhttpjw0mh5o" path="res://sprites/objects/door.png" id="2_n1rf0"]
+[ext_resource type="Script" path="res://scripts/hamster-wheel.gd" id="3_e662u"]
 [ext_resource type="Texture2D" uid="uid://xef6ycelk2dt" path="res://sprites/objects/hamster-wheel-moving.png" id="3_u3jc7"]
 [ext_resource type="Texture2D" uid="uid://4l5knkjsrxv4" path="res://sprites/objects/hamster-wheel-static.png" id="4_78uok"]
 [ext_resource type="Texture2D" uid="uid://b54mjtbdxjhov" path="res://sprites/objects/table.png" id="5_8ygj3"]
@@ -64,6 +65,65 @@ tile_size = Vector2i(400, 400)
 physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_gfu0c")
 sources/4 = SubResource("TileSetAtlasSource_yrte2")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujafs"]
+size = Vector2(80, 601)
+
+[sub_resource type="Animation" id="Animation_nnvrn"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MovingPart:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ppw4v"]
+resource_name = "rotate"
+length = 7.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MovingPart:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_ivskd"]
+resource_name = "rotate-fast"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MovingPart:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -1.5708]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lweua"]
+_data = {
+"RESET": SubResource("Animation_nnvrn"),
+"rotate": SubResource("Animation_ppw4v"),
+"rotate-fast": SubResource("Animation_ivskd")
+}
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1keod"]
 emission_shape = 3
@@ -167,9 +227,15 @@ texture = ExtResource("2_n1rf0")
 
 [node name="HamsterWheel" type="StaticBody2D" parent="ObjectsBegindCharacter"]
 position = Vector2(-984, 96)
+script = ExtResource("3_e662u")
 
 [node name="StaticPart" type="Sprite2D" parent="ObjectsBegindCharacter/HamsterWheel"]
 texture = ExtResource("3_u3jc7")
+
+[node name="MovingPart2" type="Sprite2D" parent="ObjectsBegindCharacter/HamsterWheel"]
+modulate = Color(1, 1, 1, 0.596078)
+position = Vector2(0, -40)
+texture = ExtResource("4_78uok")
 
 [node name="MovingPart" type="Sprite2D" parent="ObjectsBegindCharacter/HamsterWheel"]
 position = Vector2(0, -40)
@@ -177,6 +243,20 @@ texture = ExtResource("4_78uok")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsBegindCharacter/HamsterWheel"]
 polygon = PackedVector2Array(184, 312, 136, 336, 72, 352, -8, 360, -96, 344, -96, -232, -192, -248, -264, -336, -408, -112, -416, 424, -416, 448, -240, 448, 248, 440)
+
+[node name="Area2D" type="Area2D" parent="ObjectsBegindCharacter/HamsterWheel"]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectsBegindCharacter/HamsterWheel/Area2D"]
+position = Vector2(-104, 68.5)
+shape = SubResource("RectangleShape2D_ujafs")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ObjectsBegindCharacter/HamsterWheel"]
+autoplay = "rotate-fast"
+libraries = {
+"": SubResource("AnimationLibrary_lweua")
+}
 
 [node name="Table" type="StaticBody2D" parent="ObjectsBegindCharacter"]
 position = Vector2(688, 1784)
@@ -446,3 +526,5 @@ Then let's find out!"
 label_settings = ExtResource("21_l4u0x")
 
 [connection signal="body_entered" from="TriggersAndBoundaries/YippeeTrigger" to="Character" method="_on_finished_trigger_body_entered"]
+[connection signal="body_entered" from="ObjectsBegindCharacter/HamsterWheel/Area2D" to="Character" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="ObjectsBegindCharacter/HamsterWheel/Area2D" to="Character" method="_on_area_2d_body_exited"]

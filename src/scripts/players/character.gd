@@ -12,6 +12,8 @@ var _jumps_made := 0
 var _walk_is_playing = false
 var _run_is_playing = false
 
+var is_in_hamster_cage := false
+
 
 func _physics_process(delta):
 	var horizontal_direction = (
@@ -103,8 +105,26 @@ func _physics_process(delta):
 		_walk_is_playing = false
 		_run_is_playing = false
 	
+	if is_running and is_in_hamster_cage:
+		print("Yes")
+		HamsterWheel.rotate_normal()
+		print("Fast")
+	if is_walking and is_in_hamster_cage:
+		HamsterWheel.rotate_fast()
+	else:
+		HamsterWheel.stop_rotating()
+		print("Stop")
+	
 	move_and_slide()
 
 
 func _on_finished_trigger_body_entered(body):
 	SceneTransition.change_scene_to_file("res://scenes/end.tscn", 0.5)
+
+
+func _on_area_2d_body_entered(body):
+	is_in_hamster_cage = true
+
+
+func _on_area_2d_body_exited(body):
+	is_in_hamster_cage = false

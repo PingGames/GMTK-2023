@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SceneTransition="*res://scenes/scene-transition.tscn"
 Music="*res://scenes/music.tscn"
+HamsterWheel="*res://scripts/hamster-wheel.gd"
 
 [display]
 
