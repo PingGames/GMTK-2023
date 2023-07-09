@@ -111,5 +111,5 @@ text = "Credits"
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_menu_button_pressed" flags=18]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
-[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_menu_button_pressed" flags=18]
+[connection signal="pressed" from="Container/VBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
