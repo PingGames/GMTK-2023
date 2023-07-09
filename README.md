@@ -1,6 +1,6 @@
 # Humansters &ndash; GMTK-2023
 
-![alt text](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/ui/title.png)
+![alt text](https://github.com/PingGames/GMTK-2023/blob/development/src/sprites/ui/title.png)
 
 A repository for our submission to the GTMK Game Jam 2023. This year's\
 theme is "Reversed Roles".
