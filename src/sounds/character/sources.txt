@@ -1,0 +1,4 @@
+step-grass: Blender Foundation (Lamoot) -- https://opengameart.org/content/grass-foot-step-sounds-yo-frankie
+jump: Blender Foundation (Lamoot) -- https://opengameart.org/content/funny-comic-cartoon-bounce-sound
+step-wood: Jute (qubodup) -- https://opengameart.org/content/foot-walking-step-sounds-on-stone-water-snow-wood-and-dirt
+water-splash: Blender Foundation (Lamoot) -- https://opengameart.org/content/water-splash-yo-frankie
