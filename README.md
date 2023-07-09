@@ -3,6 +3,8 @@
 A repository for our submission to the GTMK Game Jam 2023. This year's\
 theme is "Reversed Roles".
 
+Play it now: https://pinggames.itch.io/humansters
+
 ## Our idea
 
 We live in a parallel universe where animals have humans as their\
