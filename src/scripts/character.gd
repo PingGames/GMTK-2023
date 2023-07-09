@@ -71,4 +71,4 @@ func _physics_process(delta):
 
 
 func _on_finished_trigger_body_entered(body):
-	SceneTransition.change_scene_to_file("res://scenes/yippee.tscn", 0.5)
+	SceneTransition.change_scene_to_file("res://scenes/end.tscn", 0.5)

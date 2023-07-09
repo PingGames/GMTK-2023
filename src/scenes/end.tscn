@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://brd6segr3vg3k"]
+
+[ext_resource type="PackedScene" uid="uid://clmyc8xqu3a0c" path="res://scenes/character.tscn" id="1_5udv8"]
+[ext_resource type="Texture2D" uid="uid://dvtdw6k3qhnpo" path="res://sprites/level/outside.png" id="2_hqxso"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Nature" type="StaticBody2D" parent="."]
+collision_mask = 2
+
+[node name="Nature" type="Sprite2D" parent="Nature"]
+position = Vector2(2512, 1896)
+texture = ExtResource("2_hqxso")
+
+[node name="CollisionShape" type="CollisionPolygon2D" parent="Nature"]
+position = Vector2(8, 0)
+polygon = PackedVector2Array(32, 2896, 376, 2960, 520, 3000, 584, 3040, 824, 3088, 936, 3072, 1136, 3064, 1240, 3064, 1336, 3072, 1432, 3064, 1472, 3056, 1560, 3048, 1632, 3064, 1712, 3072, 1768, 3088, 1840, 3104, 1928, 3096, 2064, 3072, 2120, 3072, 2264, 3056, 2360, 3056, 2432, 3024, 2520, 3000, 2576, 3000, 2608, 3000, 2632, 3040, 2880, 3040, 3088, 3064, 3232, 3064, 3648, 3096, 4160, 3064, 4144, 2096, 4608, 2128, 4680, 3752, 56, 3648, -448, 3640, -416, 2432, 8, 2272)
+
+[node name="Character" parent="." instance=ExtResource("1_5udv8")]
+position = Vector2(640, 2840)
+scale = Vector2(0.28, 0.28)
+speed = 400.0
+
+[node name="Camera" type="Camera2D" parent="Character"]
+limit_left = 0
+limit_top = 0
+limit_right = 4864
+limit_bottom = 3584
+position_smoothing_enabled = true
+drag_horizontal_offset = 1.0
