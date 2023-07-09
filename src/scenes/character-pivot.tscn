@@ -1586,7 +1586,7 @@ rest = Transform2D(0.999994, -0.00341055, 0.00341055, 0.999994, -11, -186)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigSide/BottomBone/TorsoBone/HeadBone"]
 sprite_frames = SubResource("SpriteFrames_s0ka5")
 autoplay = "default"
-frame_progress = 0.922638
+frame_progress = 0.566829
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
