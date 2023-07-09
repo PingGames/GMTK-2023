@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bl85ilb6on5j8"]
 
 [ext_resource type="Script" path="res://scripts/players/hamster.gd" id="1_g7lq0"]
-[ext_resource type="Texture2D" uid="uid://mo5oaaypr31v" path="res://sprites/level/hamster-foot.png" id="2_brre8"]
+[ext_resource type="Texture2D" uid="uid://mo5oaaypr31v" path="res://sprites/hamster-foot.png" id="2_n6xmu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pgwrx"]
 size = Vector2(1032, 5186)
@@ -224,11 +224,11 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(-944, -1840)
 
 [node name="RightLeg" type="Sprite2D" parent="Legs"]
-texture = ExtResource("2_brre8")
+texture = ExtResource("2_n6xmu")
 
 [node name="LeftLeg" type="Sprite2D" parent="Legs"]
 position = Vector2(1848, 0)
-texture = ExtResource("2_brre8")
+texture = ExtResource("2_n6xmu")
 
 [node name="Legs2" type="Node2D" parent="."]
 visible = false
@@ -236,11 +236,11 @@ position = Vector2(-944, -1840)
 
 [node name="RightLeg" type="Sprite2D" parent="Legs2"]
 position = Vector2(-312, 16)
-texture = ExtResource("2_brre8")
+texture = ExtResource("2_n6xmu")
 
 [node name="LeftLeg" type="Sprite2D" parent="Legs2"]
 position = Vector2(1632, 8)
-texture = ExtResource("2_brre8")
+texture = ExtResource("2_n6xmu")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

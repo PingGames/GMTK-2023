@@ -1,25 +1,25 @@
 [gd_scene load_steps=30 format=3 uid="uid://bhuxeqtbkijla"]
 
-[ext_resource type="Texture2D" uid="uid://bp6wtsaqcxj4t" path="res://sprites/level/floor-tilemap.png" id="1_gy7g5"]
+[ext_resource type="Texture2D" uid="uid://bp6wtsaqcxj4t" path="res://sprites/floor-tilemap.png" id="1_fukg1"]
 [ext_resource type="PackedScene" uid="uid://clmyc8xqu3a0c" path="res://scenes/players/character.tscn" id="1_ngp3p"]
-[ext_resource type="Texture2D" uid="uid://cjhttpjw0mh5o" path="res://sprites/level/door.png" id="2_y2scu"]
-[ext_resource type="Texture2D" uid="uid://xef6ycelk2dt" path="res://sprites/level/hamster-wheel/static-part.png" id="4_imlg3"]
-[ext_resource type="Texture2D" uid="uid://4l5knkjsrxv4" path="res://sprites/level/hamster-wheel/dynamic-part.png" id="5_er75e"]
-[ext_resource type="Texture2D" uid="uid://b54mjtbdxjhov" path="res://sprites/level/table.png" id="5_l8pka"]
-[ext_resource type="Texture2D" uid="uid://fwdw6lx01uae" path="res://sprites/level/book-1.png" id="5_lyc4m"]
-[ext_resource type="Texture2D" uid="uid://csjdcl8y4rqny" path="res://sprites/level/cage.png" id="6_ewnys"]
-[ext_resource type="Texture2D" uid="uid://dwyqx5ksrmg3e" path="res://sprites/level/book-2.png" id="6_n0xav"]
-[ext_resource type="Texture2D" uid="uid://cp4sldn5jaxj4" path="res://sprites/level/window.png" id="6_nkw7o"]
+[ext_resource type="Texture2D" uid="uid://cjhttpjw0mh5o" path="res://sprites/objects/door.png" id="2_n1rf0"]
+[ext_resource type="Texture2D" uid="uid://xef6ycelk2dt" path="res://sprites/objects/hamster-wheel-moving.png" id="3_u3jc7"]
+[ext_resource type="Texture2D" uid="uid://4l5knkjsrxv4" path="res://sprites/objects/hamster-wheel-static.png" id="4_78uok"]
+[ext_resource type="Texture2D" uid="uid://b54mjtbdxjhov" path="res://sprites/objects/table.png" id="5_8ygj3"]
+[ext_resource type="Texture2D" uid="uid://fwdw6lx01uae" path="res://sprites/objects/book-1.png" id="6_ouyhb"]
+[ext_resource type="Texture2D" uid="uid://dwyqx5ksrmg3e" path="res://sprites/objects/book-2.png" id="7_l6l38"]
 [ext_resource type="AudioStream" uid="uid://85qt3obm58x2" path="res://sounds/5-minutes-of-rain-and-thunderstorm-sounds/5-minutes-of-rain-and-thunderstorm-sounds.mp3" id="7_ptn1t"]
-[ext_resource type="Texture2D" uid="uid://bxbyco4dqojt2" path="res://sprites/level/skateboard.png" id="8_hiejs"]
-[ext_resource type="Texture2D" uid="uid://fkusdi3na5od" path="res://sprites/level/pizza-box-back.png" id="9_8x2nc"]
-[ext_resource type="Texture2D" uid="uid://df0slbt85ryf3" path="res://sprites/level/ledge-with-plant.png" id="10_1hn7u"]
-[ext_resource type="Texture2D" uid="uid://c2s73ksxlyqe8" path="res://sprites/level/clothes-hooks.png" id="11_v1114"]
-[ext_resource type="Texture2D" uid="uid://k8qjscnsnx40" path="res://sprites/level/pizza-box-front.png" id="12_ckgdy"]
-[ext_resource type="Texture2D" uid="uid://c5n0afhp67xx1" path="res://sprites/level/gummy-boot.png" id="15_258wm"]
+[ext_resource type="Texture2D" uid="uid://cp4sldn5jaxj4" path="res://sprites/objects/window-frame.png" id="8_hxxcg"]
+[ext_resource type="Texture2D" uid="uid://df0slbt85ryf3" path="res://sprites/objects/ledge-with-plant.png" id="10_7jtq0"]
+[ext_resource type="Texture2D" uid="uid://bxbyco4dqojt2" path="res://sprites/objects/skateboard.png" id="11_jjok5"]
+[ext_resource type="Texture2D" uid="uid://fkusdi3na5od" path="res://sprites/objects/pizza-box-back.png" id="12_buksk"]
+[ext_resource type="Texture2D" uid="uid://c2s73ksxlyqe8" path="res://sprites/objects/clothes-hooks.png" id="13_q3mdy"]
+[ext_resource type="Texture2D" uid="uid://dit31abrs7563" path="res://sprites/objects/sneaker.png" id="14_cxsjo"]
+[ext_resource type="Texture2D" uid="uid://c5n0afhp67xx1" path="res://sprites/objects/gummy-boot.png" id="15_4we1a"]
 [ext_resource type="PackedScene" uid="uid://bl85ilb6on5j8" path="res://scenes/players/hamster.tscn" id="16_hp0gn"]
-[ext_resource type="Texture2D" uid="uid://dit31abrs7563" path="res://sprites/level/sneaker.png" id="16_ljout"]
-[ext_resource type="Texture2D" uid="uid://draoknirunb6c" path="res://sprites/level/door-frame.png" id="19_oprmj"]
+[ext_resource type="Texture2D" uid="uid://csjdcl8y4rqny" path="res://sprites/objects/cage.png" id="18_6wv8f"]
+[ext_resource type="Texture2D" uid="uid://k8qjscnsnx40" path="res://sprites/objects/pizza-box-front.png" id="19_q5ric"]
+[ext_resource type="Texture2D" uid="uid://draoknirunb6c" path="res://sprites/objects/door-frame.png" id="20_axkv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8a3sm"]
 size = Vector2(124, 924.25)
@@ -31,7 +31,7 @@ size = Vector2(944, 5416)
 bounce = 0.16
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yrte2"]
-texture = ExtResource("1_gy7g5")
+texture = ExtResource("1_fukg1")
 texture_region_size = Vector2i(400, 400)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -158,21 +158,21 @@ layer_0/tile_data = PackedInt32Array(524282, 65540, 0, 524283, 65540, 0, 524284,
 
 [node name="Door" type="Sprite2D" parent="ObjectsBegindCharacter"]
 position = Vector2(16096, 64)
-texture = ExtResource("2_y2scu")
+texture = ExtResource("2_n1rf0")
 
 [node name="Door2" type="Sprite2D" parent="ObjectsBegindCharacter"]
 position = Vector2(29040, 64)
-texture = ExtResource("2_y2scu")
+texture = ExtResource("2_n1rf0")
 
 [node name="HamsterWheel" type="StaticBody2D" parent="ObjectsBegindCharacter"]
 position = Vector2(-984, 96)
 
 [node name="StaticPart" type="Sprite2D" parent="ObjectsBegindCharacter/HamsterWheel"]
-texture = ExtResource("4_imlg3")
+texture = ExtResource("3_u3jc7")
 
 [node name="MovingPart" type="Sprite2D" parent="ObjectsBegindCharacter/HamsterWheel"]
 position = Vector2(0, -40)
-texture = ExtResource("5_er75e")
+texture = ExtResource("4_78uok")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsBegindCharacter/HamsterWheel"]
 
@@ -182,7 +182,7 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="Table" type="Sprite2D" parent="ObjectsBegindCharacter/Table"]
-texture = ExtResource("5_l8pka")
+texture = ExtResource("5_8ygj3")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsBegindCharacter/Table"]
 polygon = PackedVector2Array(-2664, -1096, -2712, -1040, -2712, -880, -2672, -832, -2480, -832, -488, -832, 432, -832, 2488, -832, 2656, -832, 2712, -872, 2712, -1064, 2664, -1096, 856, -1096, -1552, -1096)
@@ -195,7 +195,7 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="Book1" type="Sprite2D" parent="ObjectsBegindCharacter/Books/Book1"]
-texture = ExtResource("5_lyc4m")
+texture = ExtResource("6_ouyhb")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsBegindCharacter/Books/Book1"]
 polygon = PackedVector2Array(-528, -16, -528, -80, -512, -112, -480, -128, 480, -128, 504, -112, 528, -88, 528, 72, 512, 112, 472, 128, -488, 128, -528, 88)
@@ -207,7 +207,7 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="Book2" type="Sprite2D" parent="ObjectsBegindCharacter/Books/Book2"]
-texture = ExtResource("6_n0xav")
+texture = ExtResource("7_l6l38")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsBegindCharacter/Books/Book2"]
 polygon = PackedVector2Array(-616, -72, -592, -112, -560, -128, 560, -128, 592, -112, 616, -88, 616, 8, 616, 88, 592, 112, 560, 128, -144, 128, -568, 128, -616, 96)
@@ -234,7 +234,7 @@ visibility_rect = Rect2(-2500, -72.045, 5000, 3000)
 
 [node name="Frame" type="Sprite2D" parent="ObjectsBegindCharacter/Window"]
 position = Vector2(3728, -1192)
-texture = ExtResource("6_nkw7o")
+texture = ExtResource("8_hxxcg")
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="ObjectsBegindCharacter/Window/Frame"]
 position = Vector2(0, 328)
@@ -249,7 +249,7 @@ collision_mask = 2
 
 [node name="LedgeWithPlant" type="Sprite2D" parent="ObjectsBegindCharacter/Window/Ledge"]
 position = Vector2(-8, 832)
-texture = ExtResource("10_1hn7u")
+texture = ExtResource("10_7jtq0")
 
 [node name="CollisionShape" type="CollisionShape2D" parent="ObjectsBegindCharacter/Window/Ledge"]
 position = Vector2(-8, 1496)
@@ -263,7 +263,7 @@ collision_mask = 2
 
 [node name="Skateboard" type="Sprite2D" parent="ObjectsBegindCharacter/Skateboard"]
 position = Vector2(1624, 2840)
-texture = ExtResource("8_hiejs")
+texture = ExtResource("11_jjok5")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsBegindCharacter/Skateboard"]
 polygon = PackedVector2Array(2360, 2768, 2384, 2712, 2368, 2664, 2320, 2648, 2280, 2664, 2240, 2704, 2176, 2760, 1080, 2760, 1032, 2736, 992, 2688, 944, 2664, 896, 2664, 864, 2696, 872, 2760, 920, 2816, 984, 2864, 1040, 2872, 1112, 2872, 1104, 2960, 1136, 3016, 1192, 3032, 2072, 3032, 2128, 3000, 2144, 2952, 2120, 2888, 2240, 2872, 2304, 2824)
@@ -271,11 +271,11 @@ polygon = PackedVector2Array(2360, 2768, 2384, 2712, 2368, 2664, 2320, 2648, 228
 [node name="PizzaBoxLid" type="Sprite2D" parent="ObjectsBegindCharacter"]
 position = Vector2(7176.22, 2272)
 scale = Vector2(0.527772, 0.527772)
-texture = ExtResource("9_8x2nc")
+texture = ExtResource("12_buksk")
 
 [node name="ClothesHook" type="Sprite2D" parent="ObjectsBegindCharacter"]
 position = Vector2(24216, 1224)
-texture = ExtResource("11_v1114")
+texture = ExtResource("13_q3mdy")
 
 [node name="Patch" type="ColorRect" parent="ObjectsBegindCharacter/ClothesHook"]
 offset_left = 728.0
@@ -290,7 +290,7 @@ rotation = -0.0647367
 scale = Vector2(0.636629, 0.636629)
 
 [node name="Sneaker" type="Sprite2D" parent="ObjectsBegindCharacter/Sneaker"]
-texture = ExtResource("16_ljout")
+texture = ExtResource("14_cxsjo")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsBegindCharacter/Sneaker"]
 polygon = PackedVector2Array(-480, 424, -512, -144, -552, -208, -528, -336, -488, -336, -488, -232, -464, -112, -448, 96, -8, 96, 0, -192, 8, -368, 40, -360, 56, -160, 80, -88, 328, -24, 496, -16, 624, 72, 688, 208, 672, 368, 672, 432)
@@ -301,7 +301,7 @@ rotation = -0.0921624
 scale = Vector2(0.576141, 0.576141)
 
 [node name="RubberBoot" type="Sprite2D" parent="ObjectsBegindCharacter/RubberBoot"]
-texture = ExtResource("15_258wm")
+texture = ExtResource("15_4we1a")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsBegindCharacter/RubberBoot"]
 polygon = PackedVector2Array(-696, 712, -696, -584, -736, -632, -736, -816, -80, -808, 0, -784, 24, -696, 16, -608, -40, -528, -40, 144, 232, 184, 472, 224, 632, 304, 712, 440, 736, 560, 736, 664, 744, 784, -712, 800)
@@ -333,7 +333,7 @@ collision_mask = 2
 
 [node name="Cage" type="Sprite2D" parent="ObjectsInFrontOfCharacter/HamsterCage"]
 position = Vector2(-528, -32)
-texture = ExtResource("6_ewnys")
+texture = ExtResource("18_6wv8f")
 
 [node name="CollisionShapeBottom" type="CollisionPolygon2D" parent="ObjectsInFrontOfCharacter/HamsterCage"]
 polygon = PackedVector2Array(-1504, 448, 296, 448, 296, 504, 264, 568, -1448, 568, -1504, 528)
@@ -357,15 +357,15 @@ polygon = PackedVector2Array(-1008, -88, -1008, 200, -992, 200, -992, -80)
 polygon = PackedVector2Array(1016, 192, 1024, -80, 1008, -80, 1000, 200, 1024, 184)
 
 [node name="PizzaBoxFront" type="Sprite2D" parent="ObjectsInFrontOfCharacter/PizzaBoxFront"]
-texture = ExtResource("12_ckgdy")
+texture = ExtResource("19_q5ric")
 
 [node name="DoorFrame" type="Sprite2D" parent="ObjectsInFrontOfCharacter"]
 position = Vector2(17720, 1216)
-texture = ExtResource("19_oprmj")
+texture = ExtResource("20_axkv4")
 
 [node name="DoorFrame2" type="Sprite2D" parent="ObjectsInFrontOfCharacter"]
 position = Vector2(30680, 1216)
-texture = ExtResource("19_oprmj")
+texture = ExtResource("20_axkv4")
 
 [node name="Sneaker" type="StaticBody2D" parent="ObjectsInFrontOfCharacter"]
 position = Vector2(22480, 2704)
@@ -373,7 +373,7 @@ rotation = -0.0647367
 scale = Vector2(0.636629, 0.636629)
 
 [node name="Sneaker" type="Sprite2D" parent="ObjectsInFrontOfCharacter/Sneaker"]
-texture = ExtResource("16_ljout")
+texture = ExtResource("14_cxsjo")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsInFrontOfCharacter/Sneaker"]
 visible = false
@@ -385,7 +385,7 @@ rotation = -0.0921624
 scale = Vector2(0.576141, 0.576141)
 
 [node name="RubberBoot" type="Sprite2D" parent="ObjectsInFrontOfCharacter/RubberBoot"]
-texture = ExtResource("15_258wm")
+texture = ExtResource("15_4we1a")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsInFrontOfCharacter/RubberBoot"]
 visible = false
@@ -398,7 +398,7 @@ scale = Vector2(0.635255, 0.635255)
 
 [node name="Sneaker" type="Sprite2D" parent="ObjectsInFrontOfCharacter/Sneaker2"]
 scale = Vector2(-1, 1)
-texture = ExtResource("16_ljout")
+texture = ExtResource("14_cxsjo")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsInFrontOfCharacter/Sneaker2"]
 visible = false
@@ -410,7 +410,7 @@ rotation = -0.109449
 scale = Vector2(0.566791, 0.566791)
 
 [node name="RubberBoot" type="Sprite2D" parent="ObjectsInFrontOfCharacter/RubberBoot2"]
-texture = ExtResource("15_258wm")
+texture = ExtResource("15_4we1a")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="ObjectsInFrontOfCharacter/RubberBoot2"]
 visible = false

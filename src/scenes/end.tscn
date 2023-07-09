@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://clmyc8xqu3a0c" path="res://scenes/players/character.tscn" id="1_5udv8"]
 [ext_resource type="Script" path="res://scripts/end.gd" id="1_8gyp4"]
-[ext_resource type="Texture2D" uid="uid://dvtdw6k3qhnpo" path="res://sprites/level/outside.png" id="2_hqxso"]
+[ext_resource type="Texture2D" uid="uid://dvtdw6k3qhnpo" path="res://sprites/outside.png" id="2_rm52x"]
 [ext_resource type="AudioStream" uid="uid://85qt3obm58x2" path="res://sounds/5-minutes-of-rain-and-thunderstorm-sounds/5-minutes-of-rain-and-thunderstorm-sounds.mp3" id="4_yq5v1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_257bs"]
@@ -43,7 +43,7 @@ collision_mask = 2
 
 [node name="Nature" type="Sprite2D" parent="Nature"]
 position = Vector2(2512, 1896)
-texture = ExtResource("2_hqxso")
+texture = ExtResource("2_rm52x")
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="Nature"]
 position = Vector2(8, 0)
