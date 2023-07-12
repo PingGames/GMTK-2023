@@ -24,7 +24,7 @@ environment on their way to freedom!
 
 We used assets by the following authors:
 
- - 31 Palette: mattt &mdash; https://lospec.com/palette-list/31
+ - 👌 31 Palette: mattt &mdash; https://lospec.com/palette-list/31
  - Florist: TAD &mdash; https://opengameart.org/content/lofi-compilation
  - Rain sound: Ylmir &mdash; https://opengameart.org/content/rain-loopable
  - Jump sound: Blender Foundation (Lamoot) &mdash; https://opengameart.org/content/funny-comic-cartoon-bounce-sound
