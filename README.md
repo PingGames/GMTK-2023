@@ -1,4 +1,4 @@
-![alt text](https://github.com/PingGames/GMTK-2023/blob/development/src/sprites/ui/title.png)
+![Humansters](https://github.com/PingGames/GMTK-2023/blob/development/src/sprites/ui/title.png)
 
 A repository for our submission to the GTMK Game Jam 2023. This year's\
 theme is "Reversed Roles".
@@ -20,6 +20,25 @@ take you back to your cage as soon as they see you.
 Start exploring a cozy world with a small character and a huge\
 environment on their way to freedom!
 
+## Credits
+
+We used assets by the following authors:
+
+ - 31 Palette: mattt &mdash; https://lospec.com/palette-list/31
+ - Florist: TAD &mdash; https://opengameart.org/content/lofi-compilation
+ - Rain sound: Ylmir &mdash; https://opengameart.org/content/rain-loopable
+ - Jump sound: Blender Foundation (Lamoot) &mdash; https://opengameart.org/content/funny-comic-cartoon-bounce-sound
+ - Steps on wood: Jute (qubodup) &mdash; https://opengameart.org/content/foot-walking-step-sounds-on-stone-water-snow-wood-and-dirt
+ - Water splash: Blender Foundation (Lamoot) &mdash; https://opengameart.org/content/water-splash-yo-frankie
+
+## Screenshots
+
+![Image of menu](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-1.png)
+![Image of main character standing in the hamster cage](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-2.png)
+![Image of main character standing on the ledge](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-3.png)
+![Image of the 'You got caugth!' screen](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-4.png)
+
+
 ## License
 
 Humansters &ndash; a small metroidvenia in a world of reversed roles\
@@ -38,10 +57,3 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License\
 along with this program.  If not, see [https://www.gnu.org/licenses/](https://www.gnu.org/licenses/).
-
-## Screenshots
-
-![alt text](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-1.png)
-![alt text](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-2.png)
-![alt text](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-3.png)
-![alt text](https://github.com/PingGames/GMTK-2023/blob/artwork/src/sprites/screenshot-4.png)
