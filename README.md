@@ -22,14 +22,14 @@ environment on their way to freedom!
 
 ## Credits
 
-We used assets by the following authors:
+For creating our game, we used the following additional assets:
 
- - 👌 31 Palette: mattt &mdash; https://lospec.com/palette-list/31
- - Florist: TAD &mdash; https://opengameart.org/content/lofi-compilation
- - Rain sound: Ylmir &mdash; https://opengameart.org/content/rain-loopable
- - Jump sound: Blender Foundation (Lamoot) &mdash; https://opengameart.org/content/funny-comic-cartoon-bounce-sound
- - Steps on wood: Jute (qubodup) &mdash; https://opengameart.org/content/foot-walking-step-sounds-on-stone-water-snow-wood-and-dirt
- - Water splash: Blender Foundation (Lamoot) &mdash; https://opengameart.org/content/water-splash-yo-frankie
+ - [👌 31 Palette by mattt](https://lospec.com/palette-list/31)
+ - [Florist by TAD](https://opengameart.org/content/lofi-compilation)
+ - [Rain noises by Ylmir](https://opengameart.org/content/rain-loopable)
+ - [Jump sound by the Blender Foundation (Lamoot)](https://opengameart.org/content/funny-comic-cartoon-bounce-sound)
+ - [Steps on wood by Jute (qubodup)](https://opengameart.org/content/foot-walking-step-sounds-on-stone-water-snow-wood-and-dirt)
+ - [Water splash by the Blender Foundation (Lamoot)](https://opengameart.org/content/water-splash-yo-frankie)
 
 ## Screenshots
 
